@@ -1,36 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { GoogleSpreadsheet } from 'google-spreadsheet';
 import SignaturePad from 'react-signature-canvas';
 import './App.css';
 
+const SPREADSHEET_ID = process.env.REACT_APP_GOOGLE_SHEETS_ID;
+const CLIENT_EMAIL = process.env.REACT_APP_CLIENT_EMAIL;
+const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY.replace(/\\n/g, '\n');
+
+const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+
+async function appendSpreadsheet(data) {
+  try {
+    await doc.useServiceAccountAuth({
+      client_email: CLIENT_EMAIL,
+      private_key: PRIVATE_KEY,
+    });
+    await doc.loadInfo();
+    const sheet = doc.sheetsByIndex[0];
+    await sheet.addRow(data);
+  } catch (e) {
+    console.error('Error: ', e);
+  }
+}
+
 function App() {
-  const [inputs, setInputs] = useState({
+  const [formData, setFormData] = useState({
     name: '',
-    email: ''
+    email: '',
+    signature: '',
+    supervisorSignature: '',
   });
-  const [signature, setSignature] = useState('');
-  const sigPad = React.useRef({});
+  const sigPad = useRef(null);
+  const supervisorSigPad = useRef(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInputs(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSignature = () => {
-    setSignature(sigPad.current.getTrimmedCanvas().toDataURL('image/png'));
+  const saveSignature = (type) => {
+    if (type === 'user') {
+      const signed = sigPad.current.getTrimmedCanvas().toDataURL('image/png');
+      setFormData(prev => ({ ...prev, signature: signed }));
+    } else {
+      const signed = supervisorSigPad.current.getTrimmedCanvas().toDataURL('image/png');
+      setFormData(prev => ({ ...prev, supervisorSignature: signed }));
+    }
   };
 
-  const clearSignature = () => {
-    sigPad.current.clear();
-    setSignature('');
+  const clearSignature = (type) => {
+    if (type === 'user') {
+      sigPad.current.clear();
+      setFormData(prev => ({ ...prev, signature: '' }));
+    } else {
+      supervisorSigPad.current.clear();
+      setFormData(prev => ({ ...prev, supervisorSignature: '' }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitted Data:', inputs, signature);
-    
+    await appendSpreadsheet(formData);
+    alert('Form submitted!');
   };
 
   return (
@@ -39,22 +70,31 @@ function App() {
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" name="name" value={inputs.name} onChange={handleChange} />
+          <input type="text" name="name" value={formData.name} onChange={handleChange} />
         </label>
         <label>
           Email:
-          <input type="email" name="email" value={inputs.email} onChange={handleChange} />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} />
         </label>
         <div>
           Signature:
           <SignaturePad ref={sigPad} canvasProps={{className: 'signatureCanvas'}} />
-          <button type="button" onClick={handleSignature}>Save Signature</button>
-          <button type="button" onClick={clearSignature}>Clear Signature</button>
+          <button type="button" onClick={() => saveSignature('user')}>Save Signature</button>
+          <button type="button" onClick={() => clearSignature('user')}>Clear Signature</button>
+        </div>
+        <div>
+          Supervisor Signature:
+          <SignaturePad ref={supervisorSigPad} canvasProps={{className: 'signatureCanvas'}} />
+          <button type="button" onClick={() => saveSignature('supervisor')}>Save Signature</button>
+          <button type="button" onClick={() => clearSignature('supervisor')}>Clear Signature</button>
         </div>
         <button type="submit">Submit</button>
       </form>
-      {signature && (
-        <img src={signature} alt="Signature" />
+      {formData.signature && (
+        <img src={formData.signature} alt="User Signature" />
+      )}
+      {formData.supervisorSignature && (
+        <img src={formData.supervisorSignature} alt="Supervisor Signature" />
       )}
     </div>
   );
