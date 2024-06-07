@@ -75,24 +75,26 @@ export default async function handler(req, res) {
     const rows = response.data.values || [];
     const nextId = rows.length + 1;
 
+    const signatureImageFormula = `=IMAGE("${signature}")`;
+    const supervisorSignatureImageFormula = `=IMAGE("${supervisorSignature}")`;
+
     const newRow = [
       nextId.toString(),
-      name,
       groupName,
       email,
       date,
-      signature,
+      signatureImageFormula,
       title,
       division,
       noticeAddress,
-      supervisorSignature,
+      supervisorSignatureImageFormula,
     ];
 
     console.log("Appending new row:", newRow);
     await sheets.spreadsheets.values.append({
       spreadsheetId,
       range: 'Waiver Info!A:I', // Appends to the bottom
-      valueInputOption: 'RAW',
+      valueInputOption: 'USER_ENTERED',
       resource: {
         values: [newRow],
       },

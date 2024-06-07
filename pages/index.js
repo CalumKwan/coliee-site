@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import SignatureCanvas from 'react-signature-canvas';
 
 const Home = () => {
   const [name, setName] = useState('');
@@ -8,19 +9,25 @@ const Home = () => {
   const [division, setDivision] = useState('');
   const [noticeAddress, setNoticeAddress] = useState('');
 
+  const sigPad = useRef({});
+  const supSigPad = useRef({});
+
   const handleSubmit = async () => {
     const currentDate = new Date().toISOString().split('T')[0]; // Get current UTC date
+
+    const signatureDataUrl = sigPad.current.getTrimmedCanvas().toDataURL('image/png');
+    const supervisorSignatureDataUrl = supSigPad.current.getTrimmedCanvas().toDataURL('image/png');
 
     const testData = {
       name: name || 'Placeholder Name',
       groupName: groupName || 'Placeholder Group',
       email: email || 'placeholder@example.com',
       date: currentDate,
-      signature: 'Placeholder Signature',
+      signature: signatureDataUrl,
       title: title || 'Placeholder Title',
       division: division || 'Placeholder Division',
       noticeAddress: noticeAddress || 'Placeholder Address',
-      supervisorSignature: 'Placeholder Supervisor Signature',
+      supervisorSignature: supervisorSignatureDataUrl,
     };
 
     try {
@@ -73,7 +80,25 @@ const Home = () => {
         <label>Notice Address:</label>
         <input type="text" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} />
       </div>
-      <button type="button" onClick={handleSubmit}>Submit Test Data</button>
+      <div>
+        <label>Signature:</label>
+        <SignatureCanvas
+          ref={sigPad}
+          penColor="black"
+          canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
+        />
+        <button type="button" onClick={() => sigPad.current.clear()}>Clear Signature</button>
+      </div>
+      <div>
+        <label>Supervisor Signature:</label>
+        <SignatureCanvas
+          ref={supSigPad}
+          penColor="black"
+          canvasProps={{ width: 500, height: 200, className: 'supSigCanvas' }}
+        />
+        <button type="button" onClick={() => supSigPad.current.clear()}>Clear Supervisor Signature</button>
+      </div>
+      <button type="button" onClick={handleSubmit}>Submit Data</button>
     </div>
   );
 };
