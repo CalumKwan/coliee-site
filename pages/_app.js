@@ -1,12 +1,13 @@
-// pages/_app.js
 import '../public/scss/style.scss';
 import '../public/App.css';
-import Header from '../components/Header';
+import NavBar from '../components/NavBar';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
+      <CssBaseline />
+      <NavBar />
       <Component {...pageProps} />
     </>
   );
