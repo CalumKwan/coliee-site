@@ -1,1 +1,1 @@
-{"/api/updateSpreadsheet":"pages/api/updateSpreadsheet.js","/_app":"pages/_app.js","/_error":"pages/_error.js","/":"pages/index.html","/_document":"pages/_document.js","/404":"pages/404.html"}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/corpus":"pages/corpus.html","/api/updateSpreadsheet":"pages/api/updateSpreadsheet.js","/":"pages/index.html","/schedule":"pages/schedule.html","/tasks":"pages/tasks.html","/waiver":"pages/waiver.html","/_document":"pages/_document.js","/404":"pages/404.html"}

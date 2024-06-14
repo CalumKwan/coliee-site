@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+.content, .homepage {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.homepage h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.signatureCanvas {
+  border: 2px solid #000;
+  width: 300px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.sigCanvas, .supSigCanvas {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* Button Styles */
+button, .google-button {
+  background-color: #4285f4; /* Google blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+button:hover, .google-button:hover {
+  background-color: #3367d6; /* Darker blue on hover */
+}
+
+.google-button img {
+  margin-right: 10px;
+}
+
+/* Link Button */
+.button-link {
+  text-decoration: none;
+}
+
+.nav-link {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #4285f4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #3367d6;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #f1f1f1;
+  margin-top: 20px;
+}
