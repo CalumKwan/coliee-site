@@ -1,6 +1,6 @@
 // pages/waiver.js
 import { useState, useRef } from 'react';
-import { Container, Typography, TextField, Button, CircularProgress } from '@mui/material';
+import { Container, Typography, TextField, Button, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import SignatureCanvas from 'react-signature-canvas';
 
 const Waiver = () => {
@@ -11,6 +11,7 @@ const Waiver = () => {
   const [division, setDivision] = useState('');
   const [noticeAddress, setNoticeAddress] = useState('');
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false); // State to control modal
 
   const sigPad = useRef({});
   const supSigPad = useRef({});
@@ -52,7 +53,16 @@ const Waiver = () => {
       alert('Failed to submit data');
     } finally {
       setLoading(false);
+      setOpen(false); // Close modal after submission
     }
+  };
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -60,34 +70,49 @@ const Waiver = () => {
       <Typography variant="h1" component="h2" gutterBottom>
         COLIEE Site Form Test
       </Typography>
-      {loading && <CircularProgress />}
-      <form onSubmit={handleSubmit}>
-        <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth margin="normal" />
-        <TextField label="Group Name" value={groupName} onChange={(e) => setGroupName(e.target.value)} fullWidth margin="normal" />
-        <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
-        <TextField label="Title (optional)" value={title} onChange={(e) => setTitle(e.target.value)} fullWidth margin="normal" />
-        <TextField label="Division (optional)" value={division} onChange={(e) => setDivision(e.target.value)} fullWidth margin="normal" />
-        <TextField label="Notice Address" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} fullWidth margin="normal" />
-        <div>
-          <Typography variant="subtitle1">Signature:</Typography>
-          <SignatureCanvas
-            ref={sigPad}
-            penColor="black"
-            canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
-          />
-          <Button variant="contained" onClick={() => sigPad.current.clear()} style={{ marginTop: 10 }}>Clear Signature</Button>
-        </div>
-        <div>
-          <Typography variant="subtitle1">Supervisor Signature (only if you are a student):</Typography>
-          <SignatureCanvas
-            ref={supSigPad}
-            penColor="black"
-            canvasProps={{ width: 500, height: 200, className: 'supSigCanvas' }}
-          />
-          <Button variant="contained" onClick={() => supSigPad.current.clear()} style={{ marginTop: 10 }}>Clear Supervisor Signature</Button>
-        </div>
-        <Button type="submit" variant="contained" color="primary" style={{ marginTop: 20 }}>Submit Data</Button>
-      </form>
+      <Button variant="contained" color="primary" onClick={handleClickOpen}>
+        Memorandum for Tasks 1 and/or 2 (Case law competition)
+      </Button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Waiver Form</DialogTitle>
+        <DialogContent>
+          {loading && <CircularProgress />}
+          <form onSubmit={handleSubmit}>
+            <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Group Name" value={groupName} onChange={(e) => setGroupName(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Title (optional)" value={title} onChange={(e) => setTitle(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Division (optional)" value={division} onChange={(e) => setDivision(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Notice Address" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} fullWidth margin="normal" />
+            <div>
+              <Typography variant="subtitle1">Signature:</Typography>
+              <SignatureCanvas
+                ref={sigPad}
+                penColor="black"
+                canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
+              />
+              <Button variant="contained" onClick={() => sigPad.current.clear()} style={{ marginTop: 10 }}>Clear Signature</Button>
+            </div>
+            <div>
+              <Typography variant="subtitle1">Supervisor Signature (only if you are a student):</Typography>
+              <SignatureCanvas
+                ref={supSigPad}
+                penColor="black"
+                canvasProps={{ width: 500, height: 200, className: 'supSigCanvas' }}
+              />
+              <Button variant="contained" onClick={() => supSigPad.current.clear()} style={{ marginTop: 10 }}>Clear Supervisor Signature</Button>
+            </div>
+            <DialogActions>
+              <Button onClick={handleClose} color="primary">
+                Cancel
+              </Button>
+              <Button type="submit" variant="contained" color="primary" disabled={loading}>
+                Submit Data
+              </Button>
+            </DialogActions>
+          </form>
+        </DialogContent>
+      </Dialog>
     </Container>
   );
 };
