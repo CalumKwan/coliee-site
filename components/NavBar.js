@@ -12,6 +12,8 @@ const NavBarContainer = styled('div')({
 
 const Title = styled(Typography)({
   flexGrow: 1,
+  display: 'flex',
+  alignItems: 'center',
 });
 
 const NavLink = styled(Link)({
@@ -33,7 +35,7 @@ const NavBar = () => {
 
   const drawerList = (
     <List>
-      {['Home', 'Overview', 'Tasks', 'Schedule', 'Corpus', 'Evaluation', 'Submission', 'Results', 'Application', 'Resources', 'Contact'].map((text) => (
+      {['Overview', 'Tasks', 'Schedule', 'Corpus', 'Evaluation', 'Submission', 'Results', 'Application', 'Resources', 'Contact'].map((text) => (
         <ListItem button key={text} component={Link} href={`/${text.toLowerCase()}`}>
           <ListItemText primary={text} />
         </ListItem>
@@ -57,9 +59,10 @@ const NavBar = () => {
           ) : (
             <>
               <Title variant="h6">
+                <img src="/icon.png" alt="COLIEE Icon" style={{ width: '40px', height: '40px', marginRight: '10px' }} />
                 COLIEE 2024
               </Title>
-              {['Home', 'Overview', 'Tasks', 'Schedule', 'Corpus', 'Evaluation', 'Submission', 'Results', 'Application', 'Resources', 'Contact'].map((text) => (
+              {['Overview', 'Tasks', 'Schedule', 'Corpus', 'Evaluation', 'Submission', 'Results', 'Application', 'Resources', 'Contact'].map((text) => (
                 <NavLink key={text} href={`/${text.toLowerCase()}`} passHref>
                   <Button color="inherit">{text}</Button>
                 </NavLink>
