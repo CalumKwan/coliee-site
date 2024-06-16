@@ -1,1 +1,15 @@
-{"/_app":"pages/_app.js","/_document":"pages/_document.js","/contact":"pages/contact.html","/corpus":"pages/corpus.html","/_error":"pages/_error.js","/application":"pages/application.html","/evaluation":"pages/evaluation.html","/overview":"pages/overview.html","/resources":"pages/resources.html","/api/updateSpreadsheet":"pages/api/updateSpreadsheet.js","/results":"pages/results.html","/":"pages/index.html","/submission":"pages/submission.html","/schedule":"pages/schedule.html","/tasks":"pages/tasks.html","/waiver":"pages/waiver.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/overview": "pages/overview.js",
+  "/tasks": "pages/tasks.js",
+  "/schedule": "pages/schedule.js",
+  "/evaluation": "pages/evaluation.js",
+  "/submission": "pages/submission.js",
+  "/results": "pages/results.js",
+  "/corpus": "pages/corpus.js",
+  "/resources": "pages/resources.js",
+  "/application": "pages/application.js",
+  "/contact": "pages/contact.js"
+}
