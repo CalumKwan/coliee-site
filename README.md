@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# COLIEE React Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the COLIEE (Competition on Legal Information Extraction/Entailment) website repository. This site is developed using React and is designed to provide an interactive platform for COLIEE participants and administrators.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Running the Site Locally
 
-### `npm start`
+To run the site locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/CalumKwan/coliee-site.git
+   cd coliee-site
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install Dependencies**
+   ```sh
+   npm install
+   ```
 
-### `npm test`
+3. **Start the Development Server**
+   ```sh
+   npm run dev
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes, and you may also see any lint errors in the console.
 
-### `npm run build`
+4. **Build for Production**
+   ```sh
+   npm run build
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   This builds the app for production to the `.next` folder. It optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here’s a brief overview of the project's structure:
 
-### `npm run eject`
+```
+coliee-site/
+├── components/          # Reusable React components
+│   ├── CaseMemorandumWaiverModal.js
+│   ├── NavBar.js
+│   ├── StatuteENMemorandumWaiverModal.js
+│   ├── StatuteJAMemorandumWaiverModal.js
+│   └── ApplicationFormModal.js
+├── pages/               # Next.js pages
+│   ├── _app.js
+│   ├── application.js
+│   ├── corpus.js
+│   ├── evaluation.js
+│   ├── index.js
+│   ├── overview.js
+│   ├── results.js
+│   ├── schedule.js
+│   ├── submission.js
+│   └── tasks.js
+│   └── waiver.js
+├── public/              # Static files (e.g., images, icons)
+│   ├── favicon.ico
+│   └── coliee-icon.png
+├── styles/              # Styling files
+│   ├── globals.css
+│   └── variables.scss
+├── .gitignore           # Git ignore file
+├── package.json         # NPM package configuration
+├── README.md            # Project documentation
+└── next.config.js       # Next.js configuration
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Development Guidelines
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Component-Based Architecture**: Reuse React components to maintain a modular and maintainable codebase.
+- **Styling**: Use `globals.css` for global styles and `variables.scss` for SCSS variables.
+- **Routing**: Next.js handles routing based on the file structure in the `pages` directory. Ensure new pages follow the existing structure.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact Information
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For questions, concerns, or contributions, please contact:
 
-## Learn More
+**Calum Kwan**
+- Email: jcwan@ualberta.ca
+- Phone: 604-401-3973
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please reach out if you encounter any issues or have suggestions for improvements.
