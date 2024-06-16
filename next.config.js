@@ -8,4 +8,7 @@ module.exports = {
     config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
     return config;
   },
+  env: {
+    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
+  },
 };
