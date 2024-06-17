@@ -1,6 +1,6 @@
-# COLIEE React Site
+# COLIEE React/Next.js Site
 
-Welcome to the COLIEE (Competition on Legal Information Extraction/Entailment) website repository. This site is developed using React and is designed to provide an interactive platform for COLIEE participants and administrators.
+Welcome to the COLIEE (Competition on Legal Information Extraction/Entailment) website repository. This site is developed using React and Next.js, providing an interactive platform for COLIEE participants and administrators.
 
 ## Getting Started
 
@@ -9,25 +9,25 @@ Welcome to the COLIEE (Competition on Legal Information Extraction/Entailment) w
 To run the site locally, follow these steps:
 
 1. **Clone the Repository**
-   ```sh
+   ```
    git clone https://github.com/CalumKwan/coliee-site.git
    cd coliee-site
    ```
 
 2. **Install Dependencies**
-   ```sh
+   ```
    npm install
    ```
 
 3. **Start the Development Server**
-   ```sh
+   ```
    npm run dev
    ```
 
    This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes, and you may also see any lint errors in the console.
 
 4. **Build for Production**
-   ```sh
+   ```
    npm run build
    ```
 
@@ -40,22 +40,25 @@ Here’s a brief overview of the project's structure:
 ```
 coliee-site/
 ├── components/          # Reusable React components
-│   ├── CaseMemorandumWaiverModal.js
-│   ├── NavBar.js
-│   ├── StatuteENMemorandumWaiverModal.js
-│   ├── StatuteJAMemorandumWaiverModal.js
-│   └── ApplicationFormModal.js
+│   ├── ApplicationFormModal.tsx
+│   ├── CaseMemorandumWaiverModal.tsx
+│   ├── NavBar.tsx
+│   ├── StatuteENMemorandumWaiverModal.tsx
+│   ├── StatuteJAMemorandumWaiverModal.tsx
 ├── pages/               # Next.js pages
-│   ├── _app.js
-│   ├── application.js
-│   ├── corpus.js
-│   ├── evaluation.js
-│   ├── index.js
-│   ├── overview.js
-│   ├── results.js
-│   ├── schedule.js
-│   ├── submission.js
-│   └── tasks.js
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── application.tsx
+│   ├── contact.tsx
+│   ├── corpus.tsx
+│   ├── evaluation.tsx
+│   ├── index.tsx
+│   ├── overview.tsx
+│   ├── resources.tsx
+│   ├── results.tsx
+│   ├── schedule.tsx
+│   ├── submission.tsx
+│   ├── tasks.tsx
 │   └── waiver.js
 ├── public/              # Static files (e.g., images, icons)
 │   ├── favicon.ico
@@ -72,8 +75,10 @@ coliee-site/
 ## Development Guidelines
 
 - **Component-Based Architecture**: Reuse React components to maintain a modular and maintainable codebase.
+- **TypeScript**: The project is now using TypeScript for improved type safety and development experience. Ensure new files are created with the `.tsx` extension.
 - **Styling**: Use `globals.css` for global styles and `variables.scss` for SCSS variables.
 - **Routing**: Next.js handles routing based on the file structure in the `pages` directory. Ensure new pages follow the existing structure.
+- **Modals and Forms**: Utilize modals for forms and user interactions where appropriate, maintaining a consistent user experience.
 
 ## Contact Information
 

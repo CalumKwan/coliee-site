@@ -27,50 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/application.js"
     ],
-    "/contact": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/contact.js"
-    ],
-    "/corpus": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/corpus.js"
-    ],
-    "/evaluation": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/evaluation.js"
-    ],
     "/overview": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/overview.js"
-    ],
-    "/resources": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/resources.js"
-    ],
-    "/results": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/results.js"
-    ],
-    "/schedule": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/schedule.js"
-    ],
-    "/submission": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/submission.js"
-    ],
-    "/tasks": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/tasks.js"
     ]
   },
   "ampFirstPages": []

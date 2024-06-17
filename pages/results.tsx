@@ -1,15 +1,22 @@
-// pages/results.tsx
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Box, Link } from '@mui/material';
 
-const ResultsAndWinnersPage: React.FC = () => (
+const ResultsPage = () => (
   <Container>
-    <Typography variant="h1" component="h2" gutterBottom>
-      Results and Winners
+    <Typography variant="h3" component="h3" gutterBottom>
+      Task Winners
     </Typography>
-    <Typography variant="body1">
-      Find the results of past competitions and the winners of each task.
-    </Typography>
+    <Box mb={4}>
+      <Typography variant="body1">
+        Task 1: TQM. Full list of results available <Link href="https://sites.ualberta.ca/~rabelo/COLIEE2024/task1_results.html" target="_blank">here</Link>
+      </Typography>
+      <Typography variant="body1">
+        Task 2: AMHR. Full list of results available <Link href="https://sites.ualberta.ca/~rabelo/COLIEE2024/task2_results.html" target="_blank">here</Link>
+      </Typography>
+      <Typography variant="body1">
+        Results for the Statute Law tasks have been sent directly to participants.
+      </Typography>
+    </Box>
   </Container>
 );
 
-export default ResultsAndWinnersPage;
+export default ResultsPage;

@@ -2,14 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/overview": "pages/overview.js",
   "/tasks": "pages/tasks.js",
-  "/schedule": "pages/schedule.js",
-  "/evaluation": "pages/evaluation.js",
-  "/submission": "pages/submission.js",
-  "/results": "pages/results.js",
-  "/corpus": "pages/corpus.js",
-  "/resources": "pages/resources.js",
   "/application": "pages/application.js",
-  "/contact": "pages/contact.js"
+  "/overview": "pages/overview.js"
 }
