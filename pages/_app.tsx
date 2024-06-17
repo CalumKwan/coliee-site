@@ -1,11 +1,10 @@
-// pages/_app.tsx
 import '../public/scss/style.scss';
 import '../public/App.css';
-import NavBar from '../components/NavBar.tsx';
+import NavBar from '../components/NavBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AppProps } from 'next/app';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <CssBaseline />
