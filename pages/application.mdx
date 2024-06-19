@@ -1,11 +1,10 @@
-import { Container, Typography, Box, Button } from '@mui/material';
+
+import { Button } from '@mui/material';
 import { useState } from 'react';
 import ApplicationFormModal from '../components/ApplicationFormModal';
 import CaseMemorandumWaiverModal from '../components/CaseMemorandumWaiverModal';
 import StatuteENMemorandumWaiverModal from '../components/StatuteENMemorandumWaiverModal';
 import StatuteJAMemorandumWaiverModal from '../components/StatuteJAMemorandumWaiverModal';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useTheme } from 'next-themes';
 
 export default function ApplicationPage() {
   const [openApplicationModal, setOpenApplicationModal] = useState(false);
@@ -25,65 +24,35 @@ export default function ApplicationPage() {
   const handleOpenStatuteJAModal = () => setOpenStatuteJAModal(true);
   const handleCloseStatuteJAModal = () => setOpenStatuteJAModal(false);
 
-  const { theme } = useTheme();
-
-  const muiTheme = createTheme({
-    palette: {
-      mode: theme === 'dark' ? 'dark' : 'light',
-    },
-  });
-
   return (
-    <ThemeProvider theme={muiTheme}>
-      <Container>
-        <Typography variant="h3" component="h3" gutterBottom>
-          Application Details
-        </Typography>
-        <Box mb={4}>
-          <Typography variant="body1" gutterBottom>
-            Potential participants to COLIEE-2024 should respond to this call for participation by submitting an application. To apply, submit the application and memorandums to coliee_participation(at)nii.ac.jp:
-          </Typography>
-          <ul>
-            <li>
-              <Button variant="contained" color="primary" onClick={handleOpenApplicationModal} sx={{ color: 'text.primary' }}>
-                Application form
-              </Button>
-            </li>
-            <li>
-              <Button variant="contained" color="primary" onClick={handleOpenCaseMemorandumModal} sx={{ color: 'text.primary' }}>
-                Memorandum for Tasks 1 and/or 2 (Case law competition)
-              </Button>
-            </li>
-            <li>
-              <Button variant="contained" color="primary" onClick={handleOpenStatuteENModal} sx={{ color: 'text.primary' }}>
-                Memorandum for any of the Statute Law tasks (3 and/or 4) (English version)
-              </Button>
-            </li>
-            <li>
-              <Button variant="contained" color="primary" onClick={handleOpenStatuteJAModal} sx={{ color: 'text.primary' }}>
-                Memorandum for any of the Statute Law tasks (3 and/or 4) (Japanese version)
-              </Button>
-            </li>
-          </ul>
-        </Box>
+        <>
+          <h1>Application Details</h1>
 
-        <Box mb={4}>
-          <Typography variant="body1">
-            Researchers interested in using the COLIEE datasets outside of the scope of the Competition are allowed to do so. They still need to send the corresponding signed memorandums according to the instructions above, but not the application form. If you are a student, we request that the memorandum(s) is(are) signed by your supervisor.
-          </Typography>
-        </Box>
+          <p>Potential participants to COLIEE-2024 should respond to this call for participation by submitting an application. To apply, submit the application and memorandums to coliee_participation(at)nii.ac.jp</p>
+          <br/>
+          
+          <Button variant="contained" color="primary" onClick={handleOpenApplicationModal} sx={{ color: 'text.primary' }}>
+            Application form
+          </Button><br/><br/>
+          <Button variant="contained" color="primary" onClick={handleOpenCaseMemorandumModal} sx={{ color: 'text.primary' }}>
+            Memorandum for Tasks 1 and/or 2 (Case law competition)
+          </Button><br/><br/>
+          <Button variant="contained" color="primary" onClick={handleOpenStatuteENModal} sx={{ color: 'text.primary' }}>
+            Memorandum for any of the Statute Law tasks (3 and/or 4) (English version)
+          </Button><br/><br/>
+          <Button variant="contained" color="primary" onClick={handleOpenStatuteJAModal} sx={{ color: 'text.primary' }}>
+            Memorandum for any of the Statute Law tasks (3 and/or 4) (Japanese version)
+          </Button><br/>
 
-        <Box mb={4}>
-          <Typography variant="body1">
-            We will send an acknowledgement to the email address supplied in the form once we have processed the form.
-          </Typography>
-        </Box>
+<p>Researchers interested in using the COLIEE datasets outside of the scope of the Competition are allowed to do so. They still need to send the corresponding signed memorandums according to the instructions above, but not the application form. If you are a student, we request that the memorandum(s) is(are) signed by your supervisor.</p>
 
-        <ApplicationFormModal open={openApplicationModal} handleClose={handleCloseApplicationModal} />
-        <CaseMemorandumWaiverModal open={openCaseMemorandumModal} handleClose={handleCloseCaseMemorandumModal} />
-        <StatuteENMemorandumWaiverModal open={openStatuteENModal} handleClose={handleCloseStatuteENModal} />
-        <StatuteJAMemorandumWaiverModal open={openStatuteJAModal} handleClose={handleCloseStatuteJAModal} />
-      </Container>
-    </ThemeProvider>
+<p>We will send an acknowledgement to the email address supplied in the form once we have processed the form.</p>
+
+          <ApplicationFormModal open={openApplicationModal} handleClose={handleCloseApplicationModal} />
+          <CaseMemorandumWaiverModal open={openCaseMemorandumModal} handleClose={handleCloseCaseMemorandumModal} />
+          <StatuteENMemorandumWaiverModal open={openStatuteENModal} handleClose={handleCloseStatuteENModal} />
+          <StatuteJAMemorandumWaiverModal open={openStatuteJAModal} handleClose={handleCloseStatuteJAModal} />
+        </>
   );
 }
+

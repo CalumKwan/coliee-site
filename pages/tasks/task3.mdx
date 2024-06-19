@@ -1,0 +1,13 @@
+# Task 3
+
+## Statute Law Retrieval
+
+Our goal is to explore and evaluate legal document retrieval technologies that are both effective and reliable. The task investigates the performance of systems that search a static set of civil law articles using previously unseen queries. The goal of the task is to return relevant articles in the collection to a query. We call an article as "Relevant" to a query if the query sentence can be answered Yes/No, entailed from the meaning of the article.
+
+If combining the meanings of more than one article (e.g., "A", "B", and "C") can answer a query sentence, then all the articles ("A", "B", and "C") are considered "Relevant". If a query can be answered by an article "D", and it can be also answered by another article "E" independently, we also consider both of the articles "D" and "E" are "Relevant". This task requires the retrieval of all the articles that are relevant to answering a query.
+
+Japanese civil law articles (English translation besides Japanese) will be provided, and training data consists of pairs of a query and relevant articles. The process of executing the queries over the articles and generating the experimental runs should be entirely automatic. Test data will include only queries but no relevant articles.
+
+There should be no human intervention at any stage, including modifications to your retrieval system motivated by an inspection of the queries. You should not materially modify your retrieval system between the time you downloaded the queries and the time you submit your runs.
+
+At most three runs from each group will be assessed. The submission format and evaluation methods are described below.

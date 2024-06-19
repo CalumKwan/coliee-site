@@ -1,0 +1,24 @@
+# Tasks 3 and 4
+The format of the COLIEE competition corpora derived from an NTCIR representation of confirmed relationships between questions and the articles and cases relevant to answering the questions, as in the following example:
+
+```
+<pair label="Y" id="H18-1-2">		
+  <t1>	
+    (Seller's Warranty in cases of Superficies or Other Rights)Article 566  
+    (1)In cases where the subject matter of the sale is encumbered with for the purpose of a superficies, an emphyteusis, an easement, a right of retention or a pledge, if the buyer does not know the same and cannot achieve the purpose of the contract on account thereof, the buyer may cancel the contract. In such cases, if the contract cannot be cancelled, the buyer may only demand compensation for damages.  
+    (2)The provisions of the preceding paragraph shall apply mutatis mutandis in cases where an easement that was referred to as being in existence for the benefit of immovable property that is the subject matter of a sale, does not exist, and in cases where a leasehold is registered with respect to the immovable property.  
+    (3)In the cases set forth in the preceding two paragraphs, the cancellation of the contract or claim for damages must be made within one year from the time when the buyer comes to know the facts.  
+    (Seller's Warranty in cases of Mortgage or Other Rights) Article 567  
+    (1)If the buyer loses his/her ownership of immovable property that is the object of a sale because of the exercise of an existing statutory lien or mortgage, the buyer may cancel the contract.  
+    (2)If the buyer preserves his/her ownership by incurring expenditure for costs, he/she may claim reimbursement of those costs from the seller.  
+    (3)In the cases set forth in the preceding two paragraphs, the buyer may claim compensation if he/she suffered loss.  
+  </t1>	  
+  <t2>	
+    There is a limitation period on pursuance of warranty if there is restriction due to superficies on the subject matter, but there is no restriction on pursuance of warranty if the seller's rights were revoked due to execution of the mortgage.  
+  </t2>	 
+</pair> 
+```
+
+The above is an example where query id "H18-1-2" is confirmed to be answerable from article numbers 566 and 567 (relevant to Task 3). The pair label "Y" in this example means the answer for this query is "Yes", which is entailed from the relevant articles (relevant to Task 4 and Task 5).
+
+For the Tasks 3 and 4, the training data will be the same. The groups who participate only in the Task 3 can disregard the pair label.

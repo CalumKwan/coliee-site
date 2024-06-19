@@ -1,0 +1,16 @@
+# Task 1
+
+The corpus is given as a flat list of files containing all query and noticed cases, for both the training and test datasets. The training dataset is described in a json file containing a mapping between the query case and a list of noticed cases, as in the example below:
+
+```
+{
+  "000001.txt": ["000005.txt", "012101.txt"],  
+  "003423.txt": ["398421.txt", "012101.txt", "173651.txt"],  
+  "012831.txt": ["000001.txt"],  
+  ...
+}
+```
+
+The above is an example of a golden labels file for Task 1 containing three query cases (or "base cases"). The first query case is the file "000001.txt", which has 2 noticed cases ("000005.txt" and "012101.txt"). The second query case is the file named "003423.txt", which has 3 noticed cases (whose file names are "021.txt" and "105.txt"). The third query case ("012831.txt") has only one noticed case: "000001.txt".
+
+The test dataset json file contains only the list of query cases, and the task consists in populating the list of noticed cases for each query case.

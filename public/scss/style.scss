@@ -1,14 +1,13 @@
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "variables";
+/*@import "variables";*/
 
 /* Option 2: Import via CSS */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 // @import "node_modules/bootstrap-icons/font/bootstrap-icons.scss";
-@import "./layout/sidebar";
-@import "./layout/container";
+/*@import "./layout/sidebar";*/
+/*@import "./layout/container";*/
 
 /* General Styles */
-body {
+/*body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
@@ -17,7 +16,7 @@ body {
 
 h1 {
   color: #333;
-}
+}*/
 
 .content, .homepage {
   max-width: 800px;
@@ -28,10 +27,10 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.homepage h1 {
+/*.homepage h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-}
+}*/
 
 /* Form Styles */
 form {
@@ -71,8 +70,9 @@ form input {
 }
 
 /* Button Styles */
-button, .google-button {
-  background-color: #4285f4; /* Google blue color */
+/* Google blue color background */
+/*button, .google-button {
+  background-color: #4285f4; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -83,11 +83,12 @@ button, .google-button {
   align-items: center;
   justify-content: center;
   margin: 10px 0;
-}
+}*/
 
-button:hover, .google-button:hover {
-  background-color: #3367d6; /* Darker blue on hover */
-}
+/* Darker blue on hover */
+/*button:hover, .google-button:hover {
+  background-color: #3367d6;
+}*/
 
 .google-button img {
   margin-right: 10px;

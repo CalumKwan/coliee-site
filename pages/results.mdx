@@ -1,22 +1,10 @@
-import { Container, Typography, Box, Link } from '@mui/material';
+# Task Winners
 
-export default function ResultsPage() {
-  return (
-    <Container>
-      <Typography variant="h3" component="h3" gutterBottom>
-        Task Winners
-      </Typography>
-      <Box mb={4}>
-        <Typography variant="body1">
-          Task 1: TQM. Full list of results available <Link href="https://sites.ualberta.ca/~rabelo/COLIEE2024/task1_results.html" target="_blank">here</Link>
-        </Typography>
-        <Typography variant="body1">
-          Task 2: AMHR. Full list of results available <Link href="https://sites.ualberta.ca/~rabelo/COLIEE2024/task2_results.html" target="_blank">here</Link>
-        </Typography>
-        <Typography variant="body1">
-          Results for the Statute Law tasks have been sent directly to participants.
-        </Typography>
-      </Box>
-    </Container>
-  );
-}
+import { Cards, Card } from 'nextra/components'
+ 
+<Cards>
+  <Card title="Results: Task 1 →" href="/results/task1" />
+  <Card title="Results: Task 2 →" href="/results/task2" />
+</Cards>
+
+Results for the Statute Law tasks have been sent directly to participants.

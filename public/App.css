@@ -1,14 +1,14 @@
 /* General Styles */
-body {
+/*body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-}
+}*/
 
-h1 {
+/*h1 {
   color: #333;
-}
+}*/
 
 .content, .homepage {
   max-width: 800px;
@@ -19,10 +19,10 @@ h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.homepage h1 {
+/*.homepage h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-}
+}*/
 
 /* Form Styles */
 form {
@@ -62,8 +62,9 @@ form input {
 }
 
 /* Button Styles */
-button, .google-button {
-  background-color: #4285f4; /* Google blue color */
+/* background is Google blue color */
+/*button, .google-button {
+  background-color: #4285f4; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -74,11 +75,12 @@ button, .google-button {
   align-items: center;
   justify-content: center;
   margin: 10px 0;
-}
+}*/
 
-button:hover, .google-button:hover {
-  background-color: #3367d6; /* Darker blue on hover */
-}
+/* Darker blue on hover */
+/*button:hover, .google-button:hover {
+  background-color: #3367d6; 
+}*/
 
 .google-button img {
   margin-right: 10px;

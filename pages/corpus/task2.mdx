@@ -1,0 +1,38 @@
+# Task 2
+
+The corpus structure for Task 2 is given below:
+
+```
+{
+  "001": ["013.txt"],  
+  "002": ["003.txt", "045.txt"],  
+  ...  
+}
+```
+
+The above is an example of Task 2 training data containing 2 files. Each query case has a separate folder, which is named with the query case id. That folder contains a file named "base_case.txt", which contains the raw text of the query case (with a few fragments suppressed), a file named "entailed_fragment.txt", which contains a fragment from the query case that is entailed by one or more paragraphs of a referenced case, and a folder named "paragraphs". That folder contains the paragraphs of said referenced case, one paragraph per file, which are named 001.txt to [n].txt (n being the number of paragraphs in the referenced case). The expected answer for each case is given as a list of paragraphs in the mapping file.
+
+Given the sample above, the file structure for the corpus would be:
+
+```
+task2_training_corpus  
++--- 001  
++------- base_case.txt  
++------- entailed_fragment.txt  
++------- paragraphs  
++----------- 001.txt  
++----------- 002.txt  
++----------- ...  
++----------- 046.txt  
++--- 002  
++------- base_case.txt  
++------- entailed_fragment.txt  
++------- paragraphs  
++----------- 001.txt  
++----------- 002.txt  
++----------- ...  
++----------- 211.txt  
++--- train_labels.json  
+```
+
+For the query case 001, there are 46 paragraphs in the referenced case (among which is the expected answer, 013.txt, as given in the golden labels JSON file shown before). For the query case 002, there are 211 paragraphs in the referenced case, among which are the two which entail the fragment of text for that case (003.txt and 045.txt, as given in the golden labels file). For the case whose id is "001", the expected answer is "013.txt", meaning the entailed fragment (ie, the decision) in that query can be entailed from the paragraph id 013 in the given noticed case. The decision in the query is not the final decision of the case. This is a decision for a part of the case, and a paragraph that supports this decision should be identified in the given noticed case. The test corpora will not include the JSON file mapping, and the task is to predict which paragraph(s) entail(s) the decision given by the entailed_fragment.txt file in each case.

@@ -1,0 +1,11 @@
+# Task 1
+
+## Legal Case Retrieval
+
+Our goal is to explore and evaluate legal document retrieval technologies that are both effective and reliable. The task investigates the performance of systems that search a set of case laws that support the unseen case law. The goal of the task is to return 'noticed cases' in the given collection to a query. We call a case is 'noticed' to a query if the case is referenced by the query case. In this task, the references are redacted from the query case contents, because our goal is to measure how accurately a machine can capture decision-supporting cases for a given case.
+
+A corpus composed of Federal Court of Canada case laws will be provided. The process of executing the new query cases over the existing cases and generating the experimental runs should be entirely automatic. All query and noticed cases will be provided as a pool. In the training data, we will also disclose which are the noticed cases for each query case. In the test data, only the query cases will be given and the task is to predict which cases should be noticed with respect to each of the test query cases.
+
+There should be no human intervention at any stage, including modifications to your retrieval system motivated by an inspection of the test queries. You won't have access to the test labels before you submit your runs.
+
+At most three runs from each group will be assessed. The submission format and evaluation methods are described below.

@@ -12,26 +12,7 @@ export default {
     footer: {
       text: 'COLIEE © 2024',
     },
-    sidebar: {
-      titleComponent: ({ title, type }) => {
-        if (type === 'page') {
-          return <span>{title}</span>;
-        }
-        return <span>{title}</span>;
-      },
-      items: [
-        { title: 'Overview', href: '/overview' },
-        { title: 'Tasks', href: '/tasks' },
-        { title: 'Schedule', href: '/schedule' },
-        { title: 'Corpus', href: '/corpus' },
-        { title: 'Evaluation', href: '/evaluation' },
-        { title: 'Submission', href: '/submission' },
-        { title: 'Results', href: '/results' },
-        { title: 'Application', href: '/application' },
-        { title: 'Resources', href: '/resources' },
-        { title: 'Contact', href: '/contact' }
-      ],
-    },
+
     feedback: {
       // Hide the feedback buttons
       content: () => null,
@@ -42,7 +23,7 @@ export default {
     },
     search: {
       // Disable the search bar
-      component: () => null,
+      // component: () => null,
     },
   };
   
