@@ -46,23 +46,23 @@ coliee-site/
 │   ├── StatuteENMemorandumWaiverModal.tsx
 │   ├── StatuteJAMemorandumWaiverModal.tsx
 ├── pages/               # Next.js pages
-│   ├── _app.tsx
+│   ├── _app.mdx
 │   ├── _document.tsx
-│   ├── application.tsx
-│   ├── contact.tsx
-│   ├── corpus.tsx
-│   ├── evaluation.tsx
-│   ├── index.tsx
-│   ├── overview.tsx
-│   ├── resources.tsx
-│   ├── results.tsx
-│   ├── schedule.tsx
-│   ├── submission.tsx
-│   ├── tasks.tsx
+│   ├── application.mdx
+│   ├── contact.mdx
+│   ├── corpus.mdx
+│   ├── evaluation.mdx
+│   ├── index.mdx
+│   ├── overview.mdx
+│   ├── resources.mdx
+│   ├── results.mdx
+│   ├── schedule.mdx
+│   ├── submission.mdx
+│   ├── tasks.mdx
 │   └── waiver.js
 ├── public/              # Static files (e.g., images, icons)
 │   ├── favicon.ico
-│   └── coliee-icon.png
+│   └── icon.png
 ├── styles/              # Styling files
 │   ├── globals.css
 │   └── variables.scss
@@ -79,6 +79,7 @@ coliee-site/
 - **Styling**: Use `globals.css` for global styles and `variables.scss` for SCSS variables.
 - **Routing**: Next.js handles routing based on the file structure in the `pages` directory. Ensure new pages follow the existing structure.
 - **Modals and Forms**: Utilize modals for forms and user interactions where appropriate, maintaining a consistent user experience.
+- **Markdown & MDX**: Use `.mdx` files for content pages to take advantage of Markdown with JSX components.
 
 ## Contact Information
 
