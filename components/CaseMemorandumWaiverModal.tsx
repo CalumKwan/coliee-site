@@ -1,7 +1,8 @@
-// components/CaseMemorandumWaiverModal.tsx
 import React, { useState, useRef } from 'react';
 import { Modal, Box, Typography, TextField, Button, CircularProgress, DialogActions } from '@mui/material';
 import SignatureCanvas from 'react-signature-canvas';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useTheme } from 'next-themes';
 
 interface CaseMemorandumWaiverModalProps {
   open: boolean;
@@ -16,6 +17,14 @@ const CaseMemorandumWaiverModal: React.FC<CaseMemorandumWaiverModalProps> = ({ o
   const [division, setDivision] = useState('');
   const [noticeAddress, setNoticeAddress] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const { theme } = useTheme();
+
+  const muiTheme = createTheme({
+    palette: {
+      mode: theme === 'dark' ? 'dark' : 'light',
+    },
+  });
 
   const sigPad = useRef<SignatureCanvas | null>(null);
   const supSigPad = useRef<SignatureCanvas | null>(null);
@@ -62,66 +71,115 @@ const CaseMemorandumWaiverModal: React.FC<CaseMemorandumWaiverModalProps> = ({ o
   };
 
   return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="modal-title"
-      aria-describedby="modal-description"
-    >
-      <Box
-        sx={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          bgcolor: 'background.paper',
-          boxShadow: 24,
-          p: 4,
-          width: '80%',
-          height: '80%',
-          overflow: 'auto',
-        }}
+    <ThemeProvider theme={muiTheme}>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
       >
-        <Typography id="modal-title" variant="h6" component="h2">
-          Waiver Form
-        </Typography>
-        {loading && <CircularProgress />}
-        <form onSubmit={handleSubmit}>
-          <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth margin="normal" />
-          <TextField label="Group Name" value={groupName} onChange={(e) => setGroupName(e.target.value)} fullWidth margin="normal" />
-          <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
-          <TextField label="Title (optional)" value={title} onChange={(e) => setTitle(e.target.value)} fullWidth margin="normal" />
-          <TextField label="Division (optional)" value={division} onChange={(e) => setDivision(e.target.value)} fullWidth margin="normal" />
-          <TextField label="Notice Address" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} fullWidth margin="normal" />
-          <div>
-            <Typography variant="subtitle1">Signature:</Typography>
-            <SignatureCanvas
-              ref={sigPad}
-              penColor="black"
-              canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
-            />
-            <Button variant="contained" onClick={() => sigPad.current?.clear()} style={{ marginTop: 10 }}>Clear Signature</Button>
-          </div>
-          <div>
-            <Typography variant="subtitle1">Supervisor Signature (only if you are a student):</Typography>
-            <SignatureCanvas
-              ref={supSigPad}
-              penColor="black"
-              canvasProps={{ width: 500, height: 200, className: 'supSigCanvas' }}
-            />
-            <Button variant="contained" onClick={() => supSigPad.current?.clear()} style={{ marginTop: 10 }}>Clear Supervisor Signature</Button>
-          </div>
-          <DialogActions>
-            <Button onClick={handleClose} color="primary">
-              Cancel
-            </Button>
-            <Button type="submit" variant="contained" color="primary" disabled={loading}>
-              Submit Data
-            </Button>
-          </DialogActions>
-        </form>
-      </Box>
-    </Modal>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: 4,
+            width: '80%',
+            height: '80%',
+            overflow: 'auto',
+            color: 'text.primary', // Ensure text color matches the theme
+          }}
+        >
+          <Typography id="modal-title" variant="h6" component="h2">
+            Waiver Form
+          </Typography>
+          {loading && <CircularProgress />}
+          <form onSubmit={handleSubmit}>
+            <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Group Name" value={groupName} onChange={(e) => setGroupName(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Title (optional)" value={title} onChange={(e) => setTitle(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Division (optional)" value={division} onChange={(e) => setDivision(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Notice Address" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} fullWidth margin="normal" />
+            <div>
+              <Typography variant="subtitle1">Signature:</Typography>
+              <SignatureCanvas
+                ref={sigPad}
+                penColor="black"
+                canvasProps={{ width: 500, height: 200, className: 'sigCanvas' }}
+              />
+              <Button
+                variant="contained"
+                onClick={() => sigPad.current?.clear()}
+                sx={{
+                  marginTop: 1,
+                  color: 'text.primary',
+                  bgcolor: 'primary.main',
+                  '&:hover': {
+                    bgcolor: 'primary.dark',
+                  },
+                }}
+              >
+                Clear Signature
+              </Button>
+            </div>
+            <div>
+              <Typography variant="subtitle1">Supervisor Signature (only if you are a student):</Typography>
+              <SignatureCanvas
+                ref={supSigPad}
+                penColor="black"
+                canvasProps={{ width: 500, height: 200, className: 'supSigCanvas' }}
+              />
+              <Button
+                variant="contained"
+                onClick={() => supSigPad.current?.clear()}
+                sx={{
+                  marginTop: 1,
+                  color: 'text.primary',
+                  bgcolor: 'primary.main',
+                  '&:hover': {
+                    bgcolor: 'primary.dark',
+                  },
+                }}
+              >
+                Clear Supervisor Signature
+              </Button>
+            </div>
+            <DialogActions>
+              <Button
+                onClick={handleClose}
+                sx={{
+                  color: 'text.primary',
+                  bgcolor: 'primary.main',
+                  '&:hover': {
+                    bgcolor: 'primary.dark',
+                  },
+                }}
+              >
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  color: 'text.primary',
+                  bgcolor: 'primary.main',
+                  '&:hover': {
+                    bgcolor: 'primary.dark',
+                  },
+                }}
+                disabled={loading}
+              >
+                Submit Data
+              </Button>
+            </DialogActions>
+          </form>
+        </Box>
+      </Modal>
+    </ThemeProvider>
   );
 };
 

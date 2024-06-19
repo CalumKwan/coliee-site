@@ -1,1 +1,331 @@
-(()=>{var e={};e.id=888,e.ids=[888],e.modules={2121:(e,r,s)=>{"use strict";s.r(r),s.d(r,{default:()=>G});var t=s(997);s(4118),s(1025);var i=s(6689),u=s(3828),o=s.n(u),c=s(7717),l=s.n(c),n=s(9366),p=s.n(n),a=s(1795),m=s.n(a),x=s(59),q=s.n(x),d=s(253),h=s.n(d),y=s(601),j=s.n(y),g=s(9656),C=s.n(g),f=s(3890),v=s.n(f),b=s(3365),T=s.n(b),w=s(1664),E=s.n(w),k=s(7986),R=s(9868),F=s.n(R),P=s(8442);let M=(0,k.styled)("div")({flexGrow:1}),S=(0,k.styled)(o())({flexGrow:1,display:"flex",alignItems:"center"}),I=(0,k.styled)(E())({color:"inherit",textDecoration:"none"}),L=()=>{let[e,r]=(0,i.useState)(!1),s=(0,P.useTheme)(),u=F()(s.breakpoints.down("sm")),o=e=>s=>{("keydown"!==s.type||"Tab"!==s.key&&"Shift"!==s.key)&&r(e)},c=t.jsx(l(),{children:["Overview","Tasks","Schedule","Corpus","Evaluation","Submission","Results","Application","Resources","Contact"].map(e=>t.jsx(p(),{button:!0,component:E(),href:`/${e.toLowerCase()}`,children:t.jsx(m(),{primary:e})},e))});return t.jsx(M,{children:t.jsx(q(),{position:"static",children:t.jsx(h(),{children:u?(0,t.jsxs)(t.Fragment,{children:[t.jsx(j(),{edge:"start",color:"inherit","aria-label":"menu",onClick:o(!0),children:t.jsx(T(),{})}),t.jsx(C(),{anchor:"left",open:e,onClose:o(!1),children:c})]}):(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)(S,{variant:"h6",children:[t.jsx("img",{src:"/icon.png",alt:"COLIEE Icon",style:{width:"40px",height:"40px",marginRight:"10px"}}),"COLIEE 2024"]}),["Overview","Tasks","Schedule","Corpus","Evaluation","Submission","Results","Application","Resources","Contact"].map(e=>t.jsx(I,{href:`/${e.toLowerCase()}`,passHref:!0,children:t.jsx(v(),{color:"inherit",children:e})},e))]})})})})};var A=s(4960),O=s.n(A);let G=function({Component:e,pageProps:r}){return(0,t.jsxs)(t.Fragment,{children:[t.jsx(O(),{}),t.jsx(L,{}),t.jsx(e,{...r})]})}},1025:()=>{},4118:()=>{},7123:e=>{"use strict";e.exports=require("@mui/base/ClassNameGenerator")},7483:e=>{"use strict";e.exports=require("@mui/base/FocusTrap")},8951:e=>{"use strict";e.exports=require("@mui/base/Portal")},5194:e=>{"use strict";e.exports=require("@mui/base/unstable_useModal")},9799:e=>{"use strict";e.exports=require("@mui/base/utils")},3365:e=>{"use strict";e.exports=require("@mui/icons-material/Menu")},4960:e=>{"use strict";e.exports=require("@mui/material/CssBaseline")},8442:e=>{"use strict";e.exports=require("@mui/material/styles")},9868:e=>{"use strict";e.exports=require("@mui/material/useMediaQuery")},7986:e=>{"use strict";e.exports=require("@mui/system")},243:e=>{"use strict";e.exports=require("@mui/system/RtlProvider")},9590:e=>{"use strict";e.exports=require("@mui/system/colorManipulator")},9826:e=>{"use strict";e.exports=require("@mui/system/createStyled")},1573:e=>{"use strict";e.exports=require("@mui/system/createTheme")},2681:e=>{"use strict";e.exports=require("@mui/system/styleFunctionSx")},845:e=>{"use strict";e.exports=require("@mui/system/useThemeProps")},2031:e=>{"use strict";e.exports=require("@mui/utils/HTMLElementType")},3543:e=>{"use strict";e.exports=require("@mui/utils/capitalize")},6686:e=>{"use strict";e.exports=require("@mui/utils/chainPropTypes")},3559:e=>{"use strict";e.exports=require("@mui/utils/composeClasses")},6517:e=>{"use strict";e.exports=require("@mui/utils/createChainedFunction")},2583:e=>{"use strict";e.exports=require("@mui/utils/debounce")},697:e=>{"use strict";e.exports=require("@mui/utils/deepmerge")},65:e=>{"use strict";e.exports=require("@mui/utils/deprecatedPropType")},7968:e=>{"use strict";e.exports=require("@mui/utils/elementAcceptingRef")},2450:e=>{"use strict";e.exports=require("@mui/utils/elementTypeAcceptingRef")},1416:e=>{"use strict";e.exports=require("@mui/utils/formatMuiErrorMessage")},1392:e=>{"use strict";e.exports=require("@mui/utils/generateUtilityClass")},2558:e=>{"use strict";e.exports=require("@mui/utils/generateUtilityClasses")},9846:e=>{"use strict";e.exports=require("@mui/utils/integerPropType")},3713:e=>{"use strict";e.exports=require("@mui/utils/isMuiElement")},8880:e=>{"use strict";e.exports=require("@mui/utils/ownerDocument")},7653:e=>{"use strict";e.exports=require("@mui/utils/ownerWindow")},515:e=>{"use strict";e.exports=require("@mui/utils/refType")},1080:e=>{"use strict";e.exports=require("@mui/utils/requirePropFactory")},1459:e=>{"use strict";e.exports=require("@mui/utils/resolveProps")},1009:e=>{"use strict";e.exports=require("@mui/utils/setRef")},7229:e=>{"use strict";e.exports=require("@mui/utils/unsupportedProp")},9315:e=>{"use strict";e.exports=require("@mui/utils/useControlled")},7319:e=>{"use strict";e.exports=require("@mui/utils/useEnhancedEffect")},6440:e=>{"use strict";e.exports=require("@mui/utils/useEventCallback")},1954:e=>{"use strict";e.exports=require("@mui/utils/useForkRef")},3018:e=>{"use strict";e.exports=require("@mui/utils/useId")},3157:e=>{"use strict";e.exports=require("@mui/utils/useIsFocusVisible")},9790:e=>{"use strict";e.exports=require("@mui/utils/useTimeout")},8103:e=>{"use strict";e.exports=require("clsx")},2785:e=>{"use strict";e.exports=require("next/dist/compiled/next-server/pages.runtime.prod.js")},580:e=>{"use strict";e.exports=require("prop-types")},6689:e=>{"use strict";e.exports=require("react")},4466:e=>{"use strict";e.exports=require("react-transition-group")},997:e=>{"use strict";e.exports=require("react/jsx-runtime")}};var r=require("../webpack-runtime.js");r.C(e);var s=e=>r(r.s=e),t=r.X(0,[117,842],()=>s(2121));module.exports=t})();
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(() => {
+var exports = {};
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
+exports.modules = {
+
+/***/ "./pages/_app.mdx":
+/*!************************!*\
+  !*** ./pages/_app.mdx ***!
+  \************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   __toc: () => (/* binding */ __toc),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var nextra_theme_docs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! nextra-theme-docs */ \"./node_modules/nextra-theme-docs/dist/index.js\");\n/* harmony import */ var C_Users_16044_coliee_site_theme_config_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme.config.js */ \"./theme.config.js\");\n/* harmony import */ var nextra_theme_docs_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! nextra-theme-docs/style.css */ \"./node_modules/nextra-theme-docs/style.css\");\n/* harmony import */ var nextra_theme_docs_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(nextra_theme_docs_style_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _public_scss_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/scss/style.scss */ \"./public/scss/style.scss\");\n/* harmony import */ var _public_scss_style_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_scss_style_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _public_App_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/App.css */ \"./public/App.css\");\n/* harmony import */ var _public_App_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_public_App_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mdx-js/react */ \"@mdx-js/react\");\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_mdx_js_react__WEBPACK_IMPORTED_MODULE_5__, nextra_theme_docs__WEBPACK_IMPORTED_MODULE_6__]);\n([_mdx_js_react__WEBPACK_IMPORTED_MODULE_5__, nextra_theme_docs__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);\n\n\n\n\n/*@jsxRuntime automatic @jsxImportSource react*/ \n\n\nconst MDXLayout = function MyApp({ Component, pageProps }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_5__.MDXProvider, {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n            ...pageProps\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\pages\\\\_app.mdx\",\n            lineNumber: 11,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\pages\\\\_app.mdx\",\n        lineNumber: 10,\n        columnNumber: 10\n    }, this);\n};\nconst __toc = [];\nfunction _createMdxContent(props) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {}, void 0, false);\n}\nfunction MDXContent(props = {}) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(MDXLayout, {\n        ...props,\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_createMdxContent, {\n            ...props\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\pages\\\\_app.mdx\",\n            lineNumber: 19,\n            columnNumber: 32\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\pages\\\\_app.mdx\",\n        lineNumber: 19,\n        columnNumber: 10\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MDXContent);\nconst __nextra_internal__ = globalThis[Symbol.for(\"__nextra_internal__\")] ||= Object.create(null);\n__nextra_internal__.Layout = nextra_theme_docs__WEBPACK_IMPORTED_MODULE_6__[\"default\"];\n__nextra_internal__.pageMap = [\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"application\",\n        \"route\": \"/application\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"contact\",\n        \"route\": \"/contact\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"corpus\",\n        \"route\": \"/corpus\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"evaluation\",\n        \"route\": \"/evaluation\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"overview\",\n        \"route\": \"/overview\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"resources\",\n        \"route\": \"/resources\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"results\",\n        \"route\": \"/results\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"schedule\",\n        \"route\": \"/schedule\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"submission\",\n        \"route\": \"/submission\"\n    },\n    {\n        \"kind\": \"MdxPage\",\n        \"name\": \"tasks\",\n        \"route\": \"/tasks\"\n    },\n    {\n        \"kind\": \"Meta\",\n        \"data\": {\n            \"overview\": {\n                \"title\": \"Overview\"\n            },\n            \"tasks\": {\n                \"title\": \"Tasks\"\n            },\n            \"schedule\": {\n                \"title\": \"Schedule\"\n            },\n            \"corpus\": {\n                \"title\": \"Corpus\"\n            },\n            \"evaluation\": {\n                \"title\": \"Evaluation\"\n            },\n            \"submission\": {\n                \"title\": \"Submission\"\n            },\n            \"results\": {\n                \"title\": \"Results\"\n            },\n            \"application\": {\n                \"title\": \"Application\"\n            },\n            \"resources\": {\n                \"title\": \"Resources\"\n            },\n            \"contact\": {\n                \"title\": \"Contact\"\n            }\n        }\n    }\n];\n__nextra_internal__.flexsearch = {\n    \"codeblocks\": true\n};\n__nextra_internal__.themeConfig = C_Users_16044_coliee_site_theme_config_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLm1keCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUErQztBQUM4QjtBQUV6QztBQUNwQyw4Q0FBOEMsR0FDWDtBQUNSO0FBQ2U7QUFDMUMsTUFBTUcsWUFBWSxTQUFTQyxNQUFNLEVBQUNDLFNBQVMsRUFBRUMsU0FBUyxFQUFDO0lBQ3JELHFCQUFPLDhEQUFDSixzREFBV0E7a0JBQ2YsNEVBQUNHO1lBQVcsR0FBR0MsU0FBUzs7Ozs7Ozs7Ozs7QUFFOUI7QUFDTyxNQUFNQyxRQUFRLEVBQUUsQ0FBQztBQUN4QixTQUFTQyxrQkFBa0JDLEtBQUs7SUFDOUIscUJBQU87QUFDVDtBQUNBLFNBQVNDLFdBQVdELFFBQVEsQ0FBQyxDQUFDO0lBQzVCLHFCQUFPLDhEQUFDTjtRQUFXLEdBQUdNLEtBQUs7a0JBQUUsNEVBQUNEO1lBQW1CLEdBQUdDLEtBQUs7Ozs7Ozs7Ozs7O0FBQzNEO0FBQ0EsaUVBQWVDLFVBQVVBLEVBQUM7QUFHMUIsTUFBTUMsc0JBQXNCQyxVQUFVLENBQUNDLE9BQU9DLEdBQUcsQ0FBQyx1QkFBdUIsS0FBS0MsT0FBT0MsTUFBTSxDQUFDO0FBQzVGTCxvQkFBb0JNLE1BQU0sR0FBR2pCLHlEQUFlQTtBQUM1Q1csb0JBQW9CTyxPQUFPLEdBQUc7SUFBQztRQUFDLFFBQU87UUFBVSxRQUFPO1FBQWMsU0FBUTtJQUFjO0lBQUU7UUFBQyxRQUFPO1FBQVUsUUFBTztRQUFVLFNBQVE7SUFBVTtJQUFFO1FBQUMsUUFBTztRQUFVLFFBQU87UUFBUyxTQUFRO0lBQVM7SUFBRTtRQUFDLFFBQU87UUFBVSxRQUFPO1FBQWEsU0FBUTtJQUFhO0lBQUU7UUFBQyxRQUFPO1FBQVUsUUFBTztRQUFXLFNBQVE7SUFBVztJQUFFO1FBQUMsUUFBTztRQUFVLFFBQU87UUFBWSxTQUFRO0lBQVk7SUFBRTtRQUFDLFFBQU87UUFBVSxRQUFPO1FBQVUsU0FBUTtJQUFVO0lBQUU7UUFBQyxRQUFPO1FBQVUsUUFBTztRQUFXLFNBQVE7SUFBVztJQUFFO1FBQUMsUUFBTztRQUFVLFFBQU87UUFBYSxTQUFRO0lBQWE7SUFBRTtRQUFDLFFBQU87UUFBVSxRQUFPO1FBQVEsU0FBUTtJQUFRO0lBQUU7UUFBQyxRQUFPO1FBQU8sUUFBTztZQUFDLFlBQVc7Z0JBQUMsU0FBUTtZQUFVO1lBQUUsU0FBUTtnQkFBQyxTQUFRO1lBQU87WUFBRSxZQUFXO2dCQUFDLFNBQVE7WUFBVTtZQUFFLFVBQVM7Z0JBQUMsU0FBUTtZQUFRO1lBQUUsY0FBYTtnQkFBQyxTQUFRO1lBQVk7WUFBRSxjQUFhO2dCQUFDLFNBQVE7WUFBWTtZQUFFLFdBQVU7Z0JBQUMsU0FBUTtZQUFTO1lBQUUsZUFBYztnQkFBQyxTQUFRO1lBQWE7WUFBRSxhQUFZO2dCQUFDLFNBQVE7WUFBVztZQUFFLFdBQVU7Z0JBQUMsU0FBUTtZQUFTO1FBQUM7SUFBQztDQUFFO0FBQ3Q3QlAsb0JBQW9CUSxVQUFVLEdBQUc7SUFBQyxjQUFhO0FBQUk7QUFDbkRSLG9CQUFvQlMsV0FBVyxHQUFHbkIsaUZBQW9CQSIsInNvdXJjZXMiOlsid2VicGFjazovL2NvbGllZS1zaXRlLy4vcGFnZXMvX2FwcC5tZHg/NDE1MiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgX19uZXh0cmFfbGF5b3V0IGZyb20gJ25leHRyYS10aGVtZS1kb2NzJ1xuaW1wb3J0IF9fbmV4dHJhX3RoZW1lQ29uZmlnIGZyb20gJ0M6L1VzZXJzLzE2MDQ0L2NvbGllZS1zaXRlL3RoZW1lLmNvbmZpZy5qcydcblxuaW1wb3J0ICduZXh0cmEtdGhlbWUtZG9jcy9zdHlsZS5jc3MnXG4vKkBqc3hSdW50aW1lIGF1dG9tYXRpYyBAanN4SW1wb3J0U291cmNlIHJlYWN0Ki9cbmltcG9ydCAnLi4vcHVibGljL3Njc3Mvc3R5bGUuc2Nzcyc7XG5pbXBvcnQgJy4uL3B1YmxpYy9BcHAuY3NzJztcbmltcG9ydCB7TURYUHJvdmlkZXJ9IGZyb20gJ0BtZHgtanMvcmVhY3QnO1xuY29uc3QgTURYTGF5b3V0ID0gZnVuY3Rpb24gTXlBcHAoe0NvbXBvbmVudCwgcGFnZVByb3BzfSkge1xuICByZXR1cm4gPE1EWFByb3ZpZGVyPlxuICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgIDwvTURYUHJvdmlkZXI+O1xufTtcbmV4cG9ydCBjb25zdCBfX3RvYyA9IFtdO1xuZnVuY3Rpb24gX2NyZWF0ZU1keENvbnRlbnQocHJvcHMpIHtcbiAgcmV0dXJuIDw+PC8+O1xufVxuZnVuY3Rpb24gTURYQ29udGVudChwcm9wcyA9IHt9KSB7XG4gIHJldHVybiA8TURYTGF5b3V0IHsuLi5wcm9wc30+PF9jcmVhdGVNZHhDb250ZW50IHsuLi5wcm9wc30gLz48L01EWExheW91dD47XG59XG5leHBvcnQgZGVmYXVsdCBNRFhDb250ZW50O1xuXG5cbmNvbnN0IF9fbmV4dHJhX2ludGVybmFsX18gPSBnbG9iYWxUaGlzW1N5bWJvbC5mb3IoJ19fbmV4dHJhX2ludGVybmFsX18nKV0gfHw9IE9iamVjdC5jcmVhdGUobnVsbClcbl9fbmV4dHJhX2ludGVybmFsX18uTGF5b3V0ID0gX19uZXh0cmFfbGF5b3V0XG5fX25leHRyYV9pbnRlcm5hbF9fLnBhZ2VNYXAgPSBbe1wia2luZFwiOlwiTWR4UGFnZVwiLFwibmFtZVwiOlwiYXBwbGljYXRpb25cIixcInJvdXRlXCI6XCIvYXBwbGljYXRpb25cIn0se1wia2luZFwiOlwiTWR4UGFnZVwiLFwibmFtZVwiOlwiY29udGFjdFwiLFwicm91dGVcIjpcIi9jb250YWN0XCJ9LHtcImtpbmRcIjpcIk1keFBhZ2VcIixcIm5hbWVcIjpcImNvcnB1c1wiLFwicm91dGVcIjpcIi9jb3JwdXNcIn0se1wia2luZFwiOlwiTWR4UGFnZVwiLFwibmFtZVwiOlwiZXZhbHVhdGlvblwiLFwicm91dGVcIjpcIi9ldmFsdWF0aW9uXCJ9LHtcImtpbmRcIjpcIk1keFBhZ2VcIixcIm5hbWVcIjpcIm92ZXJ2aWV3XCIsXCJyb3V0ZVwiOlwiL292ZXJ2aWV3XCJ9LHtcImtpbmRcIjpcIk1keFBhZ2VcIixcIm5hbWVcIjpcInJlc291cmNlc1wiLFwicm91dGVcIjpcIi9yZXNvdXJjZXNcIn0se1wia2luZFwiOlwiTWR4UGFnZVwiLFwibmFtZVwiOlwicmVzdWx0c1wiLFwicm91dGVcIjpcIi9yZXN1bHRzXCJ9LHtcImtpbmRcIjpcIk1keFBhZ2VcIixcIm5hbWVcIjpcInNjaGVkdWxlXCIsXCJyb3V0ZVwiOlwiL3NjaGVkdWxlXCJ9LHtcImtpbmRcIjpcIk1keFBhZ2VcIixcIm5hbWVcIjpcInN1Ym1pc3Npb25cIixcInJvdXRlXCI6XCIvc3VibWlzc2lvblwifSx7XCJraW5kXCI6XCJNZHhQYWdlXCIsXCJuYW1lXCI6XCJ0YXNrc1wiLFwicm91dGVcIjpcIi90YXNrc1wifSx7XCJraW5kXCI6XCJNZXRhXCIsXCJkYXRhXCI6e1wib3ZlcnZpZXdcIjp7XCJ0aXRsZVwiOlwiT3ZlcnZpZXdcIn0sXCJ0YXNrc1wiOntcInRpdGxlXCI6XCJUYXNrc1wifSxcInNjaGVkdWxlXCI6e1widGl0bGVcIjpcIlNjaGVkdWxlXCJ9LFwiY29ycHVzXCI6e1widGl0bGVcIjpcIkNvcnB1c1wifSxcImV2YWx1YXRpb25cIjp7XCJ0aXRsZVwiOlwiRXZhbHVhdGlvblwifSxcInN1Ym1pc3Npb25cIjp7XCJ0aXRsZVwiOlwiU3VibWlzc2lvblwifSxcInJlc3VsdHNcIjp7XCJ0aXRsZVwiOlwiUmVzdWx0c1wifSxcImFwcGxpY2F0aW9uXCI6e1widGl0bGVcIjpcIkFwcGxpY2F0aW9uXCJ9LFwicmVzb3VyY2VzXCI6e1widGl0bGVcIjpcIlJlc291cmNlc1wifSxcImNvbnRhY3RcIjp7XCJ0aXRsZVwiOlwiQ29udGFjdFwifX19XVxuX19uZXh0cmFfaW50ZXJuYWxfXy5mbGV4c2VhcmNoID0ge1wiY29kZWJsb2Nrc1wiOnRydWV9XG5fX25leHRyYV9pbnRlcm5hbF9fLnRoZW1lQ29uZmlnID0gX19uZXh0cmFfdGhlbWVDb25maWciXSwibmFtZXMiOlsiX19uZXh0cmFfbGF5b3V0IiwiX19uZXh0cmFfdGhlbWVDb25maWciLCJNRFhQcm92aWRlciIsIk1EWExheW91dCIsIk15QXBwIiwiQ29tcG9uZW50IiwicGFnZVByb3BzIiwiX190b2MiLCJfY3JlYXRlTWR4Q29udGVudCIsInByb3BzIiwiTURYQ29udGVudCIsIl9fbmV4dHJhX2ludGVybmFsX18iLCJnbG9iYWxUaGlzIiwiU3ltYm9sIiwiZm9yIiwiT2JqZWN0IiwiY3JlYXRlIiwiTGF5b3V0IiwicGFnZU1hcCIsImZsZXhzZWFyY2giLCJ0aGVtZUNvbmZpZyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/_app.mdx\n");
+
+/***/ }),
+
+/***/ "./theme.config.js":
+/*!*************************!*\
+  !*** ./theme.config.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    logo: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n        style: {\n            display: \"flex\",\n            alignItems: \"center\"\n        },\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                src: \"/icon.png\",\n                alt: \"COLIEE Logo\",\n                style: {\n                    height: \"50px\",\n                    marginRight: \"10px\"\n                }\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\theme.config.js\",\n                lineNumber: 4,\n                columnNumber: 9\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                children: \"COLIEE\"\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\theme.config.js\",\n                lineNumber: 5,\n                columnNumber: 9\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\theme.config.js\",\n        lineNumber: 3,\n        columnNumber: 7\n    }, undefined),\n    project: {\n    },\n    docsRepositoryBase: \"https://github.com/CalumKwan/coliee-site/blob/main\",\n    footer: {\n        text: \"COLIEE \\xa9 2024\"\n    },\n    sidebar: {\n        titleComponent: ({ title, type })=>{\n            if (type === \"page\") {\n                return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                    children: title\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\theme.config.js\",\n                    lineNumber: 18,\n                    columnNumber: 18\n                }, undefined);\n            }\n            return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                children: title\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\16044\\\\coliee-site\\\\theme.config.js\",\n                lineNumber: 20,\n                columnNumber: 16\n            }, undefined);\n        },\n        items: [\n            {\n                title: \"Overview\",\n                href: \"/overview\"\n            },\n            {\n                title: \"Tasks\",\n                href: \"/tasks\"\n            },\n            {\n                title: \"Schedule\",\n                href: \"/schedule\"\n            },\n            {\n                title: \"Corpus\",\n                href: \"/corpus\"\n            },\n            {\n                title: \"Evaluation\",\n                href: \"/evaluation\"\n            },\n            {\n                title: \"Submission\",\n                href: \"/submission\"\n            },\n            {\n                title: \"Results\",\n                href: \"/results\"\n            },\n            {\n                title: \"Application\",\n                href: \"/application\"\n            },\n            {\n                title: \"Resources\",\n                href: \"/resources\"\n            },\n            {\n                title: \"Contact\",\n                href: \"/contact\"\n            }\n        ]\n    },\n    feedback: {\n        // Hide the feedback buttons\n        content: ()=>null\n    },\n    editLink: {\n        // Hide the edit link\n        component: ()=>null\n    },\n    search: {\n        // Disable the search bar\n        component: ()=>null\n    }\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi90aGVtZS5jb25maWcuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBLGlFQUFlO0lBQ1hBLG9CQUNFLDhEQUFDQztRQUFLQyxPQUFPO1lBQUVDLFNBQVM7WUFBUUMsWUFBWTtRQUFTOzswQkFDbkQsOERBQUNDO2dCQUFJQyxLQUFJO2dCQUFZQyxLQUFJO2dCQUFjTCxPQUFPO29CQUFFTSxRQUFRO29CQUFRQyxhQUFhO2dCQUFPOzs7Ozs7MEJBQ3BGLDhEQUFDUjswQkFBSzs7Ozs7Ozs7Ozs7O0lBR1ZTLFNBQVM7SUFFVDtJQUNBQyxvQkFBb0I7SUFDcEJDLFFBQVE7UUFDTkMsTUFBTTtJQUNSO0lBQ0FDLFNBQVM7UUFDUEMsZ0JBQWdCLENBQUMsRUFBRUMsS0FBSyxFQUFFQyxJQUFJLEVBQUU7WUFDOUIsSUFBSUEsU0FBUyxRQUFRO2dCQUNuQixxQkFBTyw4REFBQ2hCOzhCQUFNZTs7Ozs7O1lBQ2hCO1lBQ0EscUJBQU8sOERBQUNmOzBCQUFNZTs7Ozs7O1FBQ2hCO1FBQ0FFLE9BQU87WUFDTDtnQkFBRUYsT0FBTztnQkFBWUcsTUFBTTtZQUFZO1lBQ3ZDO2dCQUFFSCxPQUFPO2dCQUFTRyxNQUFNO1lBQVM7WUFDakM7Z0JBQUVILE9BQU87Z0JBQVlHLE1BQU07WUFBWTtZQUN2QztnQkFBRUgsT0FBTztnQkFBVUcsTUFBTTtZQUFVO1lBQ25DO2dCQUFFSCxPQUFPO2dCQUFjRyxNQUFNO1lBQWM7WUFDM0M7Z0JBQUVILE9BQU87Z0JBQWNHLE1BQU07WUFBYztZQUMzQztnQkFBRUgsT0FBTztnQkFBV0csTUFBTTtZQUFXO1lBQ3JDO2dCQUFFSCxPQUFPO2dCQUFlRyxNQUFNO1lBQWU7WUFDN0M7Z0JBQUVILE9BQU87Z0JBQWFHLE1BQU07WUFBYTtZQUN6QztnQkFBRUgsT0FBTztnQkFBV0csTUFBTTtZQUFXO1NBQ3RDO0lBQ0g7SUFDQUMsVUFBVTtRQUNSLDRCQUE0QjtRQUM1QkMsU0FBUyxJQUFNO0lBQ2pCO0lBQ0FDLFVBQVU7UUFDUixxQkFBcUI7UUFDckJDLFdBQVcsSUFBTTtJQUNuQjtJQUNBQyxRQUFRO1FBQ04seUJBQXlCO1FBQ3pCRCxXQUFXLElBQU07SUFDbkI7QUFDRixDQUFDLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jb2xpZWUtc2l0ZS8uL3RoZW1lLmNvbmZpZy5qcz9hNmM5Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IHtcclxuICAgIGxvZ286IChcclxuICAgICAgPHNwYW4gc3R5bGU9e3sgZGlzcGxheTogJ2ZsZXgnLCBhbGlnbkl0ZW1zOiAnY2VudGVyJyB9fT5cclxuICAgICAgICA8aW1nIHNyYz1cIi9pY29uLnBuZ1wiIGFsdD1cIkNPTElFRSBMb2dvXCIgc3R5bGU9e3sgaGVpZ2h0OiAnNTBweCcsIG1hcmdpblJpZ2h0OiAnMTBweCcgfX0gLz5cclxuICAgICAgICA8c3Bhbj5DT0xJRUU8L3NwYW4+XHJcbiAgICAgIDwvc3Bhbj5cclxuICAgICksXHJcbiAgICBwcm9qZWN0OiB7XHJcbiAgICAgIC8vIGxpbms6ICdodHRwczovL2dpdGh1Yi5jb20vQ2FsdW1Ld2FuL2NvbGllZS1zaXRlJywgLy8gQ29tbWVudCBvdXQgb3IgcmVtb3ZlIHRoaXMgbGluZSB0byBoaWRlIHRoZSBHaXRIdWIgbGlua1xyXG4gICAgfSxcclxuICAgIGRvY3NSZXBvc2l0b3J5QmFzZTogJ2h0dHBzOi8vZ2l0aHViLmNvbS9DYWx1bUt3YW4vY29saWVlLXNpdGUvYmxvYi9tYWluJyxcclxuICAgIGZvb3Rlcjoge1xyXG4gICAgICB0ZXh0OiAnQ09MSUVFIMKpIDIwMjQnLFxyXG4gICAgfSxcclxuICAgIHNpZGViYXI6IHtcclxuICAgICAgdGl0bGVDb21wb25lbnQ6ICh7IHRpdGxlLCB0eXBlIH0pID0+IHtcclxuICAgICAgICBpZiAodHlwZSA9PT0gJ3BhZ2UnKSB7XHJcbiAgICAgICAgICByZXR1cm4gPHNwYW4+e3RpdGxlfTwvc3Bhbj47XHJcbiAgICAgICAgfVxyXG4gICAgICAgIHJldHVybiA8c3Bhbj57dGl0bGV9PC9zcGFuPjtcclxuICAgICAgfSxcclxuICAgICAgaXRlbXM6IFtcclxuICAgICAgICB7IHRpdGxlOiAnT3ZlcnZpZXcnLCBocmVmOiAnL292ZXJ2aWV3JyB9LFxyXG4gICAgICAgIHsgdGl0bGU6ICdUYXNrcycsIGhyZWY6ICcvdGFza3MnIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ1NjaGVkdWxlJywgaHJlZjogJy9zY2hlZHVsZScgfSxcclxuICAgICAgICB7IHRpdGxlOiAnQ29ycHVzJywgaHJlZjogJy9jb3JwdXMnIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ0V2YWx1YXRpb24nLCBocmVmOiAnL2V2YWx1YXRpb24nIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ1N1Ym1pc3Npb24nLCBocmVmOiAnL3N1Ym1pc3Npb24nIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ1Jlc3VsdHMnLCBocmVmOiAnL3Jlc3VsdHMnIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ0FwcGxpY2F0aW9uJywgaHJlZjogJy9hcHBsaWNhdGlvbicgfSxcclxuICAgICAgICB7IHRpdGxlOiAnUmVzb3VyY2VzJywgaHJlZjogJy9yZXNvdXJjZXMnIH0sXHJcbiAgICAgICAgeyB0aXRsZTogJ0NvbnRhY3QnLCBocmVmOiAnL2NvbnRhY3QnIH1cclxuICAgICAgXSxcclxuICAgIH0sXHJcbiAgICBmZWVkYmFjazoge1xyXG4gICAgICAvLyBIaWRlIHRoZSBmZWVkYmFjayBidXR0b25zXHJcbiAgICAgIGNvbnRlbnQ6ICgpID0+IG51bGwsXHJcbiAgICB9LFxyXG4gICAgZWRpdExpbms6IHtcclxuICAgICAgLy8gSGlkZSB0aGUgZWRpdCBsaW5rXHJcbiAgICAgIGNvbXBvbmVudDogKCkgPT4gbnVsbCxcclxuICAgIH0sXHJcbiAgICBzZWFyY2g6IHtcclxuICAgICAgLy8gRGlzYWJsZSB0aGUgc2VhcmNoIGJhclxyXG4gICAgICBjb21wb25lbnQ6ICgpID0+IG51bGwsXHJcbiAgICB9LFxyXG4gIH07XHJcbiAgIl0sIm5hbWVzIjpbImxvZ28iLCJzcGFuIiwic3R5bGUiLCJkaXNwbGF5IiwiYWxpZ25JdGVtcyIsImltZyIsInNyYyIsImFsdCIsImhlaWdodCIsIm1hcmdpblJpZ2h0IiwicHJvamVjdCIsImRvY3NSZXBvc2l0b3J5QmFzZSIsImZvb3RlciIsInRleHQiLCJzaWRlYmFyIiwidGl0bGVDb21wb25lbnQiLCJ0aXRsZSIsInR5cGUiLCJpdGVtcyIsImhyZWYiLCJmZWVkYmFjayIsImNvbnRlbnQiLCJlZGl0TGluayIsImNvbXBvbmVudCIsInNlYXJjaCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./theme.config.js\n");
+
+/***/ }),
+
+/***/ "./public/App.css":
+/*!************************!*\
+  !*** ./public/App.css ***!
+  \************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./public/scss/style.scss":
+/*!********************************!*\
+  !*** ./public/scss/style.scss ***!
+  \********************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "@popperjs/core":
+/*!*********************************!*\
+  !*** external "@popperjs/core" ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@popperjs/core");
+
+/***/ }),
+
+/***/ "flexsearch":
+/*!*****************************!*\
+  !*** external "flexsearch" ***!
+  \*****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("flexsearch");
+
+/***/ }),
+
+/***/ "focus-visible":
+/*!********************************!*\
+  !*** external "focus-visible" ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("focus-visible");
+
+/***/ }),
+
+/***/ "git-url-parse":
+/*!********************************!*\
+  !*** external "git-url-parse" ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("git-url-parse");
+
+/***/ }),
+
+/***/ "intersection-observer":
+/*!****************************************!*\
+  !*** external "intersection-observer" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("intersection-observer");
+
+/***/ }),
+
+/***/ "match-sorter":
+/*!*******************************!*\
+  !*** external "match-sorter" ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("match-sorter");
+
+/***/ }),
+
+/***/ "next-seo":
+/*!***************************!*\
+  !*** external "next-seo" ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next-seo");
+
+/***/ }),
+
+/***/ "next-themes":
+/*!******************************!*\
+  !*** external "next-themes" ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next-themes");
+
+/***/ }),
+
+/***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
+/*!**********************************************************************!*\
+  !*** external "next/dist/compiled/next-server/pages.runtime.dev.js" ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/compiled/next-server/pages.runtime.dev.js");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!************************************!*\
+  !*** external "react/jsx-runtime" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "@headlessui/react":
+/*!************************************!*\
+  !*** external "@headlessui/react" ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("@headlessui/react");;
+
+/***/ }),
+
+/***/ "@mdx-js/react":
+/*!********************************!*\
+  !*** external "@mdx-js/react" ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("@mdx-js/react");;
+
+/***/ }),
+
+/***/ "@theguild/remark-mermaid/mermaid":
+/*!***************************************************!*\
+  !*** external "@theguild/remark-mermaid/mermaid" ***!
+  \***************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("@theguild/remark-mermaid/mermaid");;
+
+/***/ }),
+
+/***/ "clsx?9dfb":
+/*!***********************!*\
+  !*** external "clsx" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("clsx");;
+
+/***/ }),
+
+/***/ "scroll-into-view-if-needed":
+/*!*********************************************!*\
+  !*** external "scroll-into-view-if-needed" ***!
+  \*********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("scroll-into-view-if-needed");;
+
+/***/ }),
+
+/***/ "zod":
+/*!**********************!*\
+  !*** external "zod" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = import("zod");;
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/nextra-theme-docs","vendor-chunks/nextra"], () => (__webpack_exec__("./pages/_app.mdx")));
+module.exports = __webpack_exports__;
+
+})();

@@ -1,0 +1,13 @@
+{
+    "overview": { "title": "Overview" },
+    "tasks": { "title": "Tasks" },
+    "schedule": { "title": "Schedule" },
+    "corpus": { "title": "Corpus" },
+    "evaluation": { "title": "Evaluation" },
+    "submission": { "title": "Submission" },
+    "results": { "title": "Results" },
+    "application": { "title": "Application" },
+    "resources": { "title": "Resources" },
+    "contact": { "title": "Contact" }
+  }
+  

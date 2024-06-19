@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.tsx",
     "types"
-  ],
+, "pages/contact.mdx", "pages/corpus.mdx", "pages/_app.mdx", "pages/evaluation.mdx", "pages/index.mdx", "pages/resources.mdx", "pages/results.mdx", "pages/schedule.mdx", "pages/submission.mdx", "pages/tasks.mdx", "pages/application.mdx", "pages/_document.tsx", "pages/overview.mdx"  ],
   "exclude": [
     "node_modules"
   ]
