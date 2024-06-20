@@ -1,8 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/tasks": "pages/tasks.js",
-  "/application": "pages/application.js",
-  "/overview": "pages/overview.js"
-}
+{"/_app":"pages/_app.js","/_document":"pages/_document.js","/application":"pages/application.html","/application/applicationForm":"pages/application/applicationForm.html","/application/caseMemorandumWaiver":"pages/application/caseMemorandumWaiver.html","/application/statuteENMemorandumWaiver":"pages/application/statuteENMemorandumWaiver.html","/_error":"pages/_error.js","/application/statuteJAMemorandumWaiver":"pages/application/statuteJAMemorandumWaiver.html","/api/updateSpreadsheet":"pages/api/updateSpreadsheet.js","/contact":"pages/contact.html","/corpus/task1":"pages/corpus/task1.html","/corpus":"pages/corpus.html","/corpus/task3and4":"pages/corpus/task3and4.html","/corpus/task2":"pages/corpus/task2.html","/evaluation":"pages/evaluation.html","/overview":"pages/overview.html","/":"pages/index.html","/results/task1":"pages/results/task1.html","/results":"pages/results.html","/resources":"pages/resources.html","/results/task2":"pages/results/task2.html","/schedule":"pages/schedule.html","/submission":"pages/submission.html","/tasks":"pages/tasks.html","/tasks/task1":"pages/tasks/task1.html","/tasks/task2":"pages/tasks/task2.html","/tasks/task3":"pages/tasks/task3.html","/tasks/task4":"pages/tasks/task4.html","/waiver":"pages/waiver.html","/404":"pages/404.html"}

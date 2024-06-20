@@ -8,7 +8,7 @@ module.exports = withNextra({
     const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
     const { parsed: localEnv } = require('dotenv').config();
     const webpack = require('webpack');
-    
+
     config.plugins.push(new NodePolyfillPlugin());
     config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
     return config;

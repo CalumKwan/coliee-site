@@ -1,7 +1,7 @@
 {
     "overview": { "title": "Overview" },
-    "tasks": { "title": "Tasks" },
     "schedule": { "title": "Schedule" },
+    "tasks": { "title": "Tasks" },
     "corpus": { "title": "Corpus" },
     "evaluation": { "title": "Evaluation" },
     "submission": { "title": "Submission" },
