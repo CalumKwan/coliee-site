@@ -22,14 +22,14 @@ const StatuteJAMemorandumWaiverForm: React.FC = () => {
     const supervisorSignatureDataUrl = supSigPad.current?.getTrimmedCanvas().toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '') || '';
 
     const formData = new FormData();
-    formData.append('name', name || 'Placeholder Name');
-    formData.append('groupName', groupName || 'Placeholder Group');
-    formData.append('email', email || 'placeholder@example.com');
+    formData.append('name', name || 'N/A');
+    formData.append('groupName', groupName || 'N/A');
+    formData.append('email', email || 'N/A');
     formData.append('date', currentDate);
     formData.append('signature', signatureDataUrl);
-    formData.append('title', title || 'Placeholder Title');
-    formData.append('division', division || 'Placeholder Division');
-    formData.append('noticeAddress', noticeAddress || 'Placeholder Address');
+    formData.append('title', title || 'N/A');
+    formData.append('division', division || 'N/A');
+    formData.append('noticeAddress', noticeAddress || 'N/A');
     formData.append('supervisorSignature', supervisorSignatureDataUrl);
 
     try {
@@ -61,42 +61,38 @@ const StatuteJAMemorandumWaiverForm: React.FC = () => {
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <label className="block text-gray-700 dark:text-gray-300">Name</label>
-              <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter name" />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300">Group Name</label>
-              <input type="text" value={groupName} onChange={(e) => setGroupName(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="text" value={groupName} onChange={(e) => setGroupName(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter group name" />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300">Email</label>
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter email" />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300">Title (optional)</label>
-              <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter title" />
             </div>
             <div>
               <label className="block text-gray-700 dark:text-gray-300">Division (optional)</label>
-              <input type="text" value={division} onChange={(e) => setDivision(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="text" value={division} onChange={(e) => setDivision(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter division" />
             </div>
             <div className="sm:col-span-2">
               <label className="block text-gray-700 dark:text-gray-300">Notice Address</label>
-              <input type="text" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" />
+              <input type="text" value={noticeAddress} onChange={(e) => setNoticeAddress(e.target.value)} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Enter notice address" />
             </div>
           </div>
           <div className="mt-6">
             <label className="block text-gray-700 dark:text-gray-300">Signature</label>
             <SignatureCanvas ref={sigPad} penColor="black" canvasProps={{ className: 'border rounded w-full h-32 dark:border-gray-600 dark:bg-gray-700' }} />
-            <button type="button" onClick={() => sigPad.current?.clear()} className="mt-2 inline-flex justify-center rounded-md border border-transparent bg-gray-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-              Clear Signature
-            </button>
+            <button type="button" onClick={() => sigPad.current?.clear()} className="mt-2 inline-flex justify-center rounded-md border border-transparent bg-gray-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Clear Signature</button>
           </div>
           <div className="mt-6">
             <label className="block text-gray-700 dark:text-gray-300">Supervisor Signature (only if you are a student)</label>
             <SignatureCanvas ref={supSigPad} penColor="black" canvasProps={{ className: 'border rounded w-full h-32 dark:border-gray-600 dark:bg-gray-700' }} />
-            <button type="button" onClick={() => supSigPad.current?.clear()} className="mt-2 inline-flex justify-center rounded-md border border-transparent bg-gray-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-              Clear Supervisor Signature
-            </button>
+            <button type="button" onClick={() => supSigPad.current?.clear()} className="mt-2 inline-flex justify-center rounded-md border border-transparent bg-gray-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Clear Supervisor Signature</button>
           </div>
           <div className="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" onClick={() => {
@@ -108,12 +104,8 @@ const StatuteJAMemorandumWaiverForm: React.FC = () => {
               setTitle('');
               setDivision('');
               setNoticeAddress('');
-            }} className="text-sm font-semibold text-gray-900 dark:text-gray-300">
-              Cancel
-            </button>
-            <button type="submit" className={`rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${loading ? 'bg-gray-400' : 'bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600'}`} disabled={loading}>
-              Submit Data
-            </button>
+            }} className="text-sm font-semibold text-gray-900 dark:text-gray-300">Cancel</button>
+            <button type="submit" className={`rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${loading ? 'bg-gray-400' : 'bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600'}`} disabled={loading}>Submit Data</button>
           </div>
         </form>
       </div>
