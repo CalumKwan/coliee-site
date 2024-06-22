@@ -13,7 +13,7 @@ const StatuteJAMemorandumWaiverForm: React.FC = () => {
   const sigPad = useRef<SignatureCanvas | null>(null);
   const supSigPad = useRef<SignatureCanvas | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -93,6 +93,86 @@ const StatuteJAMemorandumWaiverForm: React.FC = () => {
             <label className="block text-gray-700 dark:text-gray-300">Supervisor Signature (only if you are a student)</label>
             <SignatureCanvas ref={supSigPad} penColor="black" canvasProps={{ className: 'border rounded w-full h-32 dark:border-gray-600 dark:bg-gray-700' }} />
             <button type="button" onClick={() => supSigPad.current?.clear()} className="mt-2 inline-flex justify-center rounded-md border border-transparent bg-gray-700 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Clear Supervisor Signature</button>
+          </div>
+          <div className="mt-6">
+            <p>By signing this form, you agree to the following terms and conditions:</p>
+            <div className="p-4 border rounded-md bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white h-48 overflow-y-scroll">
+              <p className="font-bold">MEMORANDUM ON PERMISSION TO USE JURISIN COLIEE 2024 TASK PARTICIPANT DATA COLLECTION(J)</p>
+              <p className="font-bold">Article 1. Description of Data</p>
+              <p>1. Task Data(J) is defined as data which appears in Section 1 of the Appendix attached herein.</p>
+              <p>2. Raw Submission Data is defined as data that were submitted by the task participants of the JURISIN COLIEE 2024 workshop.</p>
+              <p>3. Evaluation Data is data obtained by using the basic evaluation tools defined by COG against “Raw Submission Data”.</p>
+              <p>4. Data Collection(J) consists of the Task Data(J), Raw Submission Data, Evaluation Data, Outputs of Natural Language Processing Tools, and PROLEG logic examples.</p>
+              <p className="font-bold">Article 2. Retention of Rights</p>
+              <p>1. The copyright holders of the Task Data(J) are defined in Section 2 of the Appendix attached herein.</p>
+              <p>2. USER/USER’S RESEARCH GROUP retains all intellectual property rights relating to the technology and systems developed by USER/USER’s RESEARCH GROUP using the Data Collection(J).</p>
+              <p>3. COG retains all intellectual property rights relating to analytical results obtained by COG and improvements on the Data Collection(J) and such made by COG based on data submitted by USER/USER’s RESEARCH GROUP.</p>
+              <p className="font-bold">Article 3. Permission for Use</p>
+              <p>COG hereby permits USER/USER’S RESEARCH GROUP to use the Data Collection(J).</p>
+              <p className="font-bold">Article 4. Scope of Authorized Use</p>
+              <p>1. USER/USER’S RESEARCH GROUP shall use the Data Collection(J) solely for the purpose of accomplishing task set out in the JURISIN COLIEE 2024 Workshop and for the purpose of research related to the task until and inclusive of the last day of June 2024, the end of the term of JURISIN COLIEE 2024 Workshop.</p>
+              <p>2. USER/USER’S RESEARCH GROUP shall restrict that uses of the Data Collection(J) are done only by the following Research Representative and by those who belong to the organization (regardless of its name, such as “laboratory”, “group”, or “project”) that Representative is a member of, and do research jointly with Representative or are graduate students and the like Representative supervises (hereinafter referred to as “Group”).</p>
+              <p className="font-bold">Research Representative:</p>
+              <p>Name: Title: Affiliation:</p>
+              <p>3. USER/USER’S RESEARCH GROUP shall not sell, lend, publish, distribute, or make transmittable to a third party the Data Collection(J), copies of the Data Collection(J), or processed data which would enable a third party to reproduce the Data Collection(J).</p>
+              <p>4. USER/USER’S RESEARCH GROUP shall use the Data Collection(J) solely for the purpose of research related to legal information retrieval and natural language processing after the end of the term of JURISIN COLIEE 2024 workshop.</p>
+              <p>5. USER/USER’S RESEARCH GROUP shall maintain a list of users and make this list available to COG without delay upon request from JURISIN COLIEE.</p>
+              <p className="font-bold">Article 5. Method of Provision</p>
+              <p>COG will provide the Data Collection(J) to USER/USER’S RESEARCH GROUP using a method which is defined in Section 3 of the Appendix attached herein.</p>
+              <p className="font-bold">Article 6. Presentation of Knowledge</p>
+              <p>1. USER/USER’S RESEARCH GROUP may present research findings concerning knowledge obtained using the Data Collection(J) provided that the aforementioned presentation is within the limits of this Memorandum.</p>
+              <p>2. USER/USER’S RESEARCH GROUP may quote in part data included in the Data Collection(J) if and only if the aforementioned data is required to describe USER/USER’S RESEARCH GROUP’s own research. In such cases, USER/USER’S RESEARCH GROUP shall not violate the rights of the authors, publishers and others protected by copyright.</p>
+              <p>3. When USER/USER’S RESEARCH GROUP shall present research findings concerning knowledge obtained using the Raw Submission Data and Evaluation Data, USER/USER’S RESEARCH GROUP shall clearly mention USER/USER’S RESEARCH GROUP’s use of the data and clearly state the experimental nature of the data and the data collection procedure of the data.</p>
+              <p>4. USER/USER’S RESEARCH GROUP shall always reference the JURISIN COLIEE 2024 workshop proceedings and clearly state in the paper, thesis or other presentation that USER/USER’S RESEARCH GROUP presents: (a) USER/USER’S RESEARCH GROUP’s use of the Bar Exam Data, and (b) USER/USER’S RESEARCH GROUP’s use of the Data Collection(J).</p>
+              <p>5. USER/USER’S RESEARCH GROUP shall submit to JURISIN COLIEE: (a) a publication report including bibliographic information of the publication (the titles of the publication, volume, pages, publishers’ names and dates), and (b) one (1) offprint or one (1) copy of the publication each time when USER/USER’S RESEARCH GROUP publishes the research results using the Data Collection(J) or part of the Data Collection(J).</p>
+              <p>6. Before making public any information data developed using the Data Collection(J), USER/USER’S RESEARCH GROUP should receive consent in writing from COG in advance.</p>
+              <p>7. USER/USER’S RESEARCH GROUP shall not use evaluation results obtained through use of the Data Collection(J) for profitable purposes including advertising, and/or defamatory or slanderous purposes.</p>
+              <p className="font-bold">Article 7. Duration of Memorandum</p>
+              <p>1. This Memorandum shall be in effect from the date first above written until and inclusive of the last day of June 2024. The effect of the Memorandum shall be extended automatically to another fiscal year, unless a written objection is issued either by COG or by USER/USER’S RESEARCH GROUP more than one month before the expiration date of the Memorandum. This shall apply to consecutive fiscal years as well.</p>
+              <p>2. Notwithstanding the preceding paragraph, if permission for use of the Raw Submission Data and Evaluation Data is requested by USER/USER’S RESEARCH GROUP which shall extend the effect of the Memorandum, USER/USER’S RESEARCH GROUP shall separately enter into a new Memorandum with COG, in addition to the written notice more than one month before the expiration date of the Memorandum.</p>
+              <p>3. If USER/USER’S RESEARCH GROUP would not like to automatically renew the original terms and the renewal terms, after expiration of the term, USER/USER’S RESEARCH GROUP shall promptly delete the Data Collection(J) from any computer or media onto which it has been copied. If the organizational structure of USER/USER’S RESEARCH GROUP or the affiliation of USER/USER’S RESEARCH GROUP is changed, USER/USER’S RESEARCH GROUP shall report the change to COG without delay and, if necessary, shall sign another Memorandum.</p>
+              <p className="font-bold">Article 8. Submission of Reports</p>
+              <p>1. USER/USER’S RESEARCH GROUP shall submit to COG a report on research outcomes in accordance with procedures specified at the JURISIN COLIEE Workshop.</p>
+              <p>2. USER/USER’S RESEARCH GROUP shall submit to COG a report concerning research activities conducted by USER/USER’S RESEARCH GROUP during the duration of the Memorandum using the Data Collection(J) more than one month before the expiration date of the Memorandum.</p>
+              <p className="font-bold">Article 9. Termination of Data Use</p>
+              <p>1. If the use of data is deemed to be in violation of the Memorandum, USER/USER’S RESEARCH GROUP shall, upon instructions from COG, immediately discontinue use of the Data Collection(J) and promptly delete the Bar Exam Data and all data obtained by processing the Data Collection(J) from any computer or media onto which it has been copied. USER/USER’S RESEARCH GROUP shall submit a document attesting to deletion of the data to COG.</p>
+              <p>2. If there is a request to discontinue the use of the Data Collection(J) from the copyright holder(s) or their executor(s), USER/USER’S RESEARCH GROUP must delete said data from any computer or media onto which it has been copied upon instructions from COG. USER/USER’S RESEARCH GROUP shall submit a document attesting to deletion of the data to COG.</p>
+              <p className="font-bold">Article 10. Exemption from Liability</p>
+              <p>COG and the copyright holder(s) or their executor(s) of the Data Collection(J) shall not for any reason whatsoever be responsible for losses arising from USER/USER’S RESEARCH GROUP’s use of the Data Collection(J).</p>
+              <p className="font-bold">Article 11. Undefined Issues</p>
+              <p>Should any issues undefined in this Memorandum arise, both parties shall confer in good faith and resolve such issues.</p>
+              <p className="font-bold">Article 12. Jurisdiction</p>
+              <p>All disputes relevant to this Memorandum shall be subject to the exclusive jurisdiction of the Tokyo District Court of Japan as court of first instance. The validity, construction and performance of this Memorandum shall be governed by, and interpreted in accordance with, the law of Japan.</p>
+              <p>APPENDIX-JURISIN COLIEE 2024 Legal Information Entailment: Japanese Bar Exam Data</p>
+              <p>TASK PARTICIPANT DATA COLLECTION(J) (FOR JURISIN COLIEE WORKSHOP 2024 COMPETITION PARTICIPANTS)</p>
+              <p className="font-bold">Section 1.</p>
+              <p>The competition's formal name is JURISIN COLIEE Workshop 2024 Competition on Legal Information Extraction/Entailment: Japanese Bar Exam Data with, and the term of “Task Data(J)” consists of JURISIN COLIEE 2024 Workshop Training/Test Data written in Japanese.</p>
+              <p>2. JURISIN COLIEE 2024 Workshop Training/Test Data written in Japanese consists of a set of queries, relevant civil law articles, and Yes/No answer of the queries that COG created using Bar Exam Data of Japan which appears in Table A, Japan Civil Law Articles provided by Japanese Law Translation Database System of Ministry of Justice in Japan, and annotations that COG assigned to the data. The data will be available depending on the participating task.</p>
+              <p>Table A</p>
+              <p>A.1 Bar Exam Data</p>
+              <p>A.1.1 The training data in the following list</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2006</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2007</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2008</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2009</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2010</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2011</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2012</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2013</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2014</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2015</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2016</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2017</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2018</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2019</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2020</p>
+              <p>A.1.2 The test data for Task 3 and Task 4 in the following list</p>
+              <p>• Bar Exam(Short Answer Test) Civil Code part published in 2021</p>
+              <p className="font-bold">Section 2.</p>
+              <p>COG retains all rights under the Copyright Law relating to annotations.</p>
+              <p className="font-bold">Section 3.</p>
+              <p>COG will provide the Data Collection(J) to USER/USER’S RESEARCH GROUP by transferring the data files electronically.</p>
+            </div>
           </div>
           <div className="mt-6 flex items-center justify-end gap-x-6">
             <button type="button" onClick={() => {
