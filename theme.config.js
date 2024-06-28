@@ -25,5 +25,10 @@ export default {
       // Disable the search bar
       // component: () => null,
     },
+    useNextSeoProps() {
+      return {
+        titleTemplate: '%s – COLIEE'
+      }
+    }
   };
   
